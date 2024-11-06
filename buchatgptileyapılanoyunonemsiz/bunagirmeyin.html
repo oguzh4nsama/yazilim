@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karşılaştırma</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .image-container {
+            margin: 0 50px;
+            text-align: center;
+            position: relative; /* İçerik pozisyonu için gerekli */
+        }
+        img {
+            max-width: 200px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .attackDiv {
+            width: 20px;
+            height: 20px;
+            background-color: blue;
+            position: absolute; /* Diğer divler için konumlandırma */
+            left: calc(50% - 10px); /* Ortada başlamak için */
+            top: 300px; /* Resimlerin yüksekliği ile ayarlanabilir */
+            display: none; /* Başlangıçta gizli */
+            transition: left 0.2s ease; /* Hareket geçişi için */
+        }
+        .explosion {
+            width: 200px; /* Patlama resminin boyutu */
+            height: 200px;
+            background-image: url('patlama.png'); /* Patlama resmi */
+            background-size: cover;
+            position: absolute;
+            left: calc(50% - 100px); /* Ortada başlamak için */
+            top: 200px; /* Resimlerin yüksekliği ile ayarlanabilir */
+            display: none; /* Başlangıçta gizli */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <h2>MegaRakunİrmak</h2>
+        <img src="Rakun.png" alt="MegaRakunİrmak">
+        <button class="attack-button" data-direction="right">Saldırı</button>
+    </div>
+
+    <div class="image-container" style="margin-left: 500px;">
+        <h2>BayırDomuzuOguz</h2>
+        <img src="bayırdomuzu.png" alt="BayırDomuzuOguz">
+        <button class="attack-button" data-direction="left">Saldırı</button>
+    </div>
+
+    <div class="attackDiv"></div> <!-- Ortada başlayacak -->
+    <div class="explosion"></div> <!-- Patlama resmi -->
+
+    <script>
+        const buttons = document.querySelectorAll('.attack-button');
+        const attackDiv = document.querySelector('.attackDiv');
+        const explosionDiv = document.querySelector('.explosion');
+
+        // Div başlangıçta görünür olmalı
+        attackDiv.style.display = 'block';
+
+        // Klavye olayları için dinleyici ekle
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'w') {
+                moveDiv("right"); // W tuşuna basıldığında sağa hareket ettir
+            } else if (event.key === 'e') {
+                moveDiv("left"); // E tuşuna basıldığında sola hareket ettir
+            }
+        });
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                const direction = button.dataset.direction; // Yönü al
+                moveDiv(direction);
+            });
+        });
+
+        function moveDiv(direction) {
+            const currentPosition = parseInt(attackDiv.style.left) || (window.innerWidth / 2 - 10); // Başlangıç konumu ortada
+
+            // Yeni konumu hesapla
+            const moveAmount = direction === "right" ? 10 : -10;
+            const newPosition = currentPosition + moveAmount;
+
+            // Sınır kontrolü
+            if (newPosition >= 0 && newPosition <= (window.innerWidth - 20)) {
+                attackDiv.style.left = `${newPosition}px`; // Yeni konumu uygula
+                
+                // Çarpışma kontrolü
+                checkCollision(newPosition);
+            }
+        }
+
+        function checkCollision(position) {
+            const rakunImage = document.querySelector("img[alt='MegaRakunİrmak']");
+            const domuzImage = document.querySelector("img[alt='BayırDomuzuOguz']");
+            const rakunRect = rakunImage.getBoundingClientRect();
+            const domuzRect = domuzImage.getBoundingClientRect();
+
+            // MegaRakunİrmak ile çarpışma
+            if (position + 20 >= rakunRect.left && position <= rakunRect.right && 
+                attackDiv.getBoundingClientRect().top >= rakunRect.top && 
+                attackDiv.getBoundingClientRect().top <= rakunRect.bottom) {
+                showExplosion(rakunRect.left); // Patlamayı göster
+            }
+
+            // BayırDomuzuOguz ile çarpışma
+            if (position <= domuzRect.right && position + 20 >= domuzRect.left && 
+                attackDiv.getBoundingClientRect().top >= domuzRect.top && 
+                attackDiv.getBoundingClientRect().top <= domuzRect.bottom) {
+                showExplosion(domuzRect.left); // Patlamayı göster
+            }
+        }
+
+        function showExplosion(xPosition) {
+            explosionDiv.style.display = 'block';
+            explosionDiv.style.left = `${xPosition - 100}px`; // Patlama konumunu ayarla
+            explosionDiv.style.top = '200px'; // Yükseklik ayarlaması
+            setTimeout(() => {
+                explosionDiv.style.display = 'none'; // Patlamayı gizle
+            }, 1000); // 1 saniye sonra gizle
+        }
+    </script>
+
+</body>
+</html>
