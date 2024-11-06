@@ -20,3 +20,31 @@
 yapılacak değişikler olursa:
 
 - NOTE: TODO FIX WARNING ile bildireceğim todo eklentisi yükleyin
+
+----------------------------------------------------------------------------------------------------
+
+
+benim notlarım
+1.
+
+
+1. İlk Versiyon
+
+   İndirim Hesaplama:
+   1-Ürün fiyatını ve indirim oranını alan bir işlev oluştur.
+   2-Hesaplanan indirimli fiyatı kullanıcıya göster.
+   3-Hata Yönetimi:
+   4-Hatalı Girişler İçin Kontrol: Kullanıcı yanlış veriler girdiğinde uyarı mesajları göster.
+   5-Sınır Kontrolü: Maksimum indirim oranı veya geçersiz veri tipleri için sınırlandırmalar koy.
+   6-Hata Mesajları Notları: Tespit edilen hatalara dair çözümleri
+   not alarak hata mesajlarını kullanıcıya açıklayıcı şekilde göster.
+  
+   diyoki 
+   1-texten sayı al. butona tıklandığında indirimli halini p yeyaz yazdır.
+   2-kullanıcıya çıktıya göster.
+   3-
+
+
+
+
+
