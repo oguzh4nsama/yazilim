@@ -18,7 +18,8 @@ body {
   margin-left: -60px;
   margin-top: -50px;
   border-radius: 10px;
-  border: 1px solid red;
+  border: 5px solid rgb(105, 91, 91);
+  
 }
 p {
   color: burlywood;
