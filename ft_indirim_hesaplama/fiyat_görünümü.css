@@ -1,5 +1,5 @@
 body{
-    background-color: sienna;
+    background-color: black;
 }
 *{
     margin: 5px;   
@@ -27,7 +27,7 @@ p{
 button{
     background-color: #7c0707;
     border-color: darkred;
-    border-radius: 10px;
+    border-radius: 10px 3px 5px;
     width: 75px;
     height: 25px;
 
