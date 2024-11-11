@@ -6,7 +6,6 @@ function hesapla() {
 
   let fiyat_miktari = fiyat.value; //değerini alıyo
   let indirim_miktari = indirim.value; //değerini alıyo
-  let indirimli_fiyat =
-  fiyat_miktari - (fiyat_miktari * indirim_miktari) / 100;
+  let indirimli_fiyat = fiyat_miktari - (fiyat_miktari * indirim_miktari) / 100;
   document.getElementById("cikti").innerHTML = fiyat_miktari; //çıktı.
 }
