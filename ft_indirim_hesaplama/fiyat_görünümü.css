@@ -1,5 +1,7 @@
 body{
-    background-color: black;
+    background: linear-gradient(to bottom, red, darkred);
+    height: 100vh;
+    
 }
 *{
     margin: 5px;   

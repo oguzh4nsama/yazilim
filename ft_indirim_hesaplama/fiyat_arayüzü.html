@@ -10,10 +10,27 @@
   </head>
   <body>
     <div class="fiyatdivi">
-      <input type="text" id="fiyat" placeholder="lütfen ürün fiyatını girin" />
-      <input type="text" id="indirim" placeholder="indirim oranını girin"/>    
-      <button onclick="hesapla()">hesapla</button>
+      <input
+        type="number"
+        id="fiyat"
+        placeholder="lütfen ürün fiyatını girin"
+      />
+      <input type="number" id="indirim" placeholder="indirim oranını girin" />
+      <button onclick="hesapla()">Hesapla</button>
       <p id="cikti">fiyat:</p>
     </div>
+    <script>
+      let fiyat = document.getElementById("fiyat");
+      let indirim = document.getElementById("indirim"); //indirimi çekiyo
+      function hesapla() {
+        // tıklanınca napıcağını söylüyo
+
+        let fiyat_miktari = fiyat.value; //değerini alıyo
+        let indirim_miktari = indirim.value; //değerini alıyo
+        let indirimli_fiyat =
+          fiyat_miktari - (fiyat_miktari * indirim_miktari) / 100;
+        document.getElementById("cikti").innerHTML = fiyat_miktari; //çıktı.
+      }
+    </script>
   </body>
 </html>
