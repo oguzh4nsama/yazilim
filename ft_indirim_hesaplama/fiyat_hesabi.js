@@ -1,7 +1,8 @@
+<link rel="stylesheet" href="fiyat_arayüzü.html" />
 let fiyat = document.getElementById("fiyat");
 let indirim = document.getElementById("indirim"); //indirimi çekiyo
 function hesapla() {
-  // tıklanınca napıcağını söylüyo
+ // tıklanınca napıcağını söylüyo
 
   let fiyat_miktari = fiyat.value; //değerini alıyo
   let indirim_miktari = indirim.value; //değerini alıyo
