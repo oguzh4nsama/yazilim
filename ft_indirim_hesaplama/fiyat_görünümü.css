@@ -1,7 +1,7 @@
 *{
     margin: 5px;   
+    float: left;
 }
-
 .fiyatdivi{
     background-color: brown;
     width: 380px;
@@ -13,14 +13,23 @@
     top: 30%;
     margin-left: -50px;
     margin-top: -50px;
+    border-radius: 10px;
+}
+p{
+    color: burlywood;
+    font-size: large;
+    margin-left: 215px;   
+}
+button{
+    background-color: #7c0707;
+    border: 1;
+    border-color: darkred;
+    border-radius: 10px;
+    width: 75px;
+    height: 25px;
 
 }
-
-
-
-
-
-
-
-
-
+input{
+    border-radius: 10px;
+    color: blue;
+}
