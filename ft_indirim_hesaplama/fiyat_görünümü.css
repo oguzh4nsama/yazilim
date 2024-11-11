@@ -1,6 +1,6 @@
 body 
 {
-  background: linear-gradient(to bottom, rgb(112, 7, 7), red, darkred);
+  background: linear-gradient(to bottom, darkred, red, darkred);
   margin:50vh;
 }
 * {
@@ -8,7 +8,7 @@ body
   margin: 0px;
 }
 .fiyatdivi {
-  background: linear-gradient(to right, brown, rgb(255, 0, 0), darkred);
+  background: linear-gradient(to right, brown, rgb(248, 0, 0), darkred);
   width: 380px;
   height: 250px;
   align-items: center;
