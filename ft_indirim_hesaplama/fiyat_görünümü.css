@@ -6,7 +6,7 @@ body{
     float: left;
 }
 .fiyatdivi{
-    background-color: brown;
+    background: linear-gradient(to right, brown, darkred);
     width: 380px;
     height: 250px;
     align-items: center;  
