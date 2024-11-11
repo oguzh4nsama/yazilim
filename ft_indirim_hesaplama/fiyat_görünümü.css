@@ -29,6 +29,10 @@ button{
     height: 25px;
 
 }
+button:hover{
+    background-color: red;
+    color: #920909;
+}
 input{
     border-radius: 10px;
     color: black;
