@@ -24,6 +24,9 @@ function hesapla() {
             paragraf.style = "burlywood";
             document.getElementById("soncikti").innerHTML = "sonuc" + indirim;
             
+        }       
+        else if(indirim < 0){
+            alert("matamatik öğrenirmisin >:<");
         }
     } else {
         alert("Eksik ya da yanlış tuşlama yaptınız.");
