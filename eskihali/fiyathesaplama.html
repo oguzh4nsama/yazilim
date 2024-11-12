@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: linear-gradient(to bottom, darkred, red, darkred);
+        margin: 50vh;
+        z-index: 0;
+      }
+      * {
+        float: left;
+        margin: 0px;
+      }
+      .fiyatdivi {
+        background: linear-gradient(to right, brown, rgb(248, 0, 0), darkred);
+        width: 380px;
+        height: 250px;
+        align-items: center;
+        padding: 15px;
+        position: absolute;
+        left: 40%;
+        top: 30%;
+        margin-left: -60px;
+        margin-top: -50px;
+        border-radius: 15% 15% 0px 0px;
+        border: 5px solid burlywood;
+      }
+      p {
+        color: burlywood;
+        font-size: large;
+        position: absolute;
+        left: 210px;
+        top: 55px;
+      }
+      button {
+        background-color: #7c0707;
+        border-color: darkred;
+        border-radius: 10px 3px 5px;
+        width: 90px;
+        height: 35px;
+        font-size: medium;
+        color: burlywood;
+        margin: 5px;
+      }
+      button:hover {
+        background: linear-gradient(to right, brown, rgb(255, 0, 0));
+        color: rgb(172, 134, 84);
+      }
+      input {
+        margin: 5px;
+        border-radius: 0px 0px 10px 10px;
+        border: 2px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fiyatdivi">
+      <input
+        type="number"
+        id="fiyat"
+        placeholder="lütfen ürün fiyatını girin"
+      />
+      <input type="number" id="indirim" placeholder="indirim oranını girin" />
+      <button onclick="hesapla()">Hesapla</button>
+
+      <p id="cikti">fiyat:</p>
+    </div>
+    <script>
+      function hesapla() {
+        let fiyat1 = Number(document.getElementById("fiyat").value);
+        let indirim1 = Number(document.getElementById("indirim").value); // indirimi çekiyor
+        let indirim = fiyat1 - (fiyat1 * indirim1) / 100;
+        if (indirim < fiyat1) {
+          document.getElementById("cikti").innerText = "fiyat: " + indirim; // çıktı
+
+          if (indirim == indirim) {
+            let kart = document.createElement("div");
+            kart.id = "kart_divi";
+            kart.className = "kart_class";
+            kart.style.backgroundColor = "black";
+            kart.style.width = "100px";
+            kart.style.height = "100px";
+            kart.style.position = "absolute";
+            kart.style.left = "510px";
+            kart.style.top = "250px";
+            kart.style.zIndex = "1";
+            kart.style.margin = "1px";
+            document.body.appendChild(kart);
+            let paragraf = document.createElement("p");
+            paragraf.style.zIndex = "2";
+            paragraf.id = "soncikti";
+            paragraf.style = "burlywood";
+            document.getElementById("soncikti").innerHTML = "sonuc" + indirim;
+          }
+        } else {
+          alert("Eksik ya da yanlış tuşlama yaptınız.");
+        }
+      }
+    </script>
+  </body>
+</html>

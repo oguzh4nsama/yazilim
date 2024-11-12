@@ -9,25 +9,12 @@ body
   margin: 0px;
 }
 .fiyatdivi {
-  background: linear-gradient(to right, brown, rgb(248, 0, 0), darkred);
-  width: 380px;
-  height: 250px;
-  align-items: center;
-  padding: 15px;
-  position: absolute;
-  left: 40%;
-  top: 30%;
-  margin-left: -60px;
-  margin-top: -50px;
-  border-radius: 15% 15% 0px 0px;
-  border: 5px solid burlywood;
+  background: linear-gradient(to right, brown, rgb(248, 0, 0), darkred);     
 }
 p {
   color: burlywood;
   font-size: large;
-  position: absolute;
-  left: 210px;
-  top:55px;
+  position: relative;
 }
 button {
   background-color: #7c0707;
