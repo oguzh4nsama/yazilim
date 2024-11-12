@@ -40,7 +40,7 @@ input {
   grid-template-areas:
     'header header header header header header'
     'menu main main main right right'
-    'menu footer footer footer footer footer';
+    'menu footer footer footer footer right';
   gap: 10px;
   background-color: #2196F3;
   padding: 10px;
