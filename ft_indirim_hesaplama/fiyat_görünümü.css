@@ -2,6 +2,7 @@ body
 {
   background: linear-gradient(to bottom, darkred, red, darkred);
   margin:50vh;
+  z-index: 0;
 }
 * {
   float: left;
@@ -24,8 +25,9 @@ body
 p {
   color: burlywood;
   font-size: large;
-  margin-left: 215px;
-  margin-top: 5px;
+  position: absolute;
+  left: 210px;
+  top:55px;
 }
 button {
   background-color: #7c0707;

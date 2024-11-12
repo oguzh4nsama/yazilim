@@ -16,6 +16,16 @@
    Responsive Düzenleme:
    PC Görünümü: 3 sütunlu bir düzen oluştur, her satırda üç ürün kartı yer alsın.
    Mobil Görünümü: Mobil cihazlarda her satırda tek bir ürün kartı gözükecek şekilde yapılandır.
+----------------------------------------------------------------------------------------------------------------------------
+
+yapım sırası;
+-----------------------------------------------------------------------------------
+1- adım 1. ürün kartı;
+2- adım 2. grid ??
+4- adım 4. pc 3 tel 1 tek seferde görünücek şekilde ayarla
+3- adım 3. her kart ne indirimsiz üstü cili ekleme indirimli fiyatı normal göster.
+-----------------------------------------------------------------------------------
+
 
 yapılacak değişikler olursa:
 
