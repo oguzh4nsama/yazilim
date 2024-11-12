@@ -7,24 +7,21 @@
     <link rel="stylesheet" href="fiyat_görünümü.css" />
   </head>
   <body>
-   <!-- 
-     <div class="fiyatdivi">
-      <input
-        type="number"
-        id="fiyat"
-        placeholder="Lütfen ürün fiyatını girin"
-      />
-      <input type="number" id="indirim" placeholder="İndirim oranını girin" />
-      <button onclick="hesapla()">Hesapla</button>
-      <p id="cikti">Fiyat:</p> 
-      -->
-  
+
     <div class="grid-container">
-      <div class="item1">üst</div>
-      <div class="item2">sol</div>
-      <div class="item3">benim kodum</div>  
-      <div class="item4">burası bos</div>
-      <div class="item5">burası alt </div>
+
+      <div class="item1"></div>           <!-- üst -->
+      <div class="item2"></div>           <!-- sol -->
+
+      <div class="item3">                 <!-- ortası -->
+        <input  type="number" id="fiyat"  placeholder="Lütfen ürün fiyatını girin" />
+        <input type="number" id="indirim" placeholder="İndirim oranını girin" />
+        <button onclick="hesapla()">Hesapla</button>
+        <p id="cikti">Fiyat:</p>
+      </div>
+
+      <div class="item4"></div>            <!-- sağ -->
+      <div class="item5"></div>            <!-- alt -->
     </div>
 
     <script src="fiyat_hesabi.js"></script>

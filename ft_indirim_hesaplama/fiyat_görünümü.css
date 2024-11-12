@@ -1,11 +1,10 @@
-.fiyatdivi {
-  background: linear-gradient(to right, brown, rgb(248, 0, 0), darkred);     
+.item3 {
+  background: linear-gradient(to right, brown, rgb(248, 0, 0), darkred);   
 }
 p {
-  color: burlywood;
+  color: rgb(153, 150, 145);
   font-size: large;
   position: relative;
-  margin: 5px;
 }
 button {
   background-color: #7c0707;
@@ -13,22 +12,16 @@ button {
   border-radius: 10px 3px 5px;
   font-size: medium;
   color: burlywood;
-  margin: 5px;
+ 
 }
 button:hover {
   background: linear-gradient(to right, brown, rgb(255, 0, 0));
   color: rgb(172, 134, 84);
 }
 input {
-  margin: 5px;
   border-radius: 0px 0px 10px 10px;
   border: 2px solid gray;
 }
-
-
-
-
-
 .item1 { grid-area: header; }
 .item2 { grid-area: menu; }
 .item3 { grid-area: main; }
@@ -39,8 +32,8 @@ input {
   display: grid;
   grid-template-areas:
     'header header header header header header'
-    'menu main main main right right'
-    'menu footer footer footer footer right';
+    'menu main main main main right'
+    'footer footer footer footer footer footer';
   gap: 10px;
   background-color: #2196F3;
   padding: 10px;
