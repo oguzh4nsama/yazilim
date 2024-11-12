@@ -1,14 +1,14 @@
 function hesapla() {
     let fiyat1 = Number(document.getElementById("fiyat").value);
     let indirim1 = Number(document.getElementById("indirim").value); // indirimi çekiyor
-    let indirim = fiyat1 - (fiyat1 * indirim1) / 100;
-    if (indirim < fiyat1) {
-        document.getElementById("cikti").innerText = "fiyat: " + indirim; // çıktı
-
-        if (indirim == indirim) { //2. durum için
+    let indirim = fiyat1 - (fiyat1 * indirim1) / 100; {
+        if (indirim == indirim) {
+            //2. durum için
             let kart = document.createElement("div");
             kart.id = "kart_divi";
             kart.className = "kart_class";
+            // FIX: kart_class için style css dosyasından düzenlenecek
+            //
             kart.style.backgroundColor = "black";
             kart.style.width = "100px";
             kart.style.height = "100px";
@@ -23,12 +23,9 @@ function hesapla() {
             paragraf.id = "soncikti";
             paragraf.style = "burlywood";
             document.getElementById("soncikti").innerHTML = "sonuc" + indirim;
-            
-        }       
-        else if(indirim < 0){
-            alert("matamatik öğrenirmisin >:<");
         }
-    } else {
-        alert("Eksik ya da yanlış tuşlama yaptınız.");
+        else {
+            alert("Eksik ya da yanlış tuşlama yaptınız.");
+        }
     }
 }
