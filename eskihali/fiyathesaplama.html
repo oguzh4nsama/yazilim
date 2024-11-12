@@ -69,14 +69,14 @@
       <p id="cikti">fiyat:</p>
     </div>
     <script>
-      function hesapla() {
-        let fiyat1 = Number(document.getElementById("fiyat").value);
-        let indirim1 = Number(document.getElementById("indirim").value); // indirimi çekiyor
-        let indirim = fiyat1 - (fiyat1 * indirim1) / 100;
-        if (indirim < fiyat1) {
-          document.getElementById("cikti").innerText = "fiyat: " + indirim; // çıktı
+        function hesapla() {
+    let fiyat1 = Number(document.getElementById("fiyat").value);
+    let indirim1 = Number(document.getElementById("indirim").value); // indirimi çekiyor
+    let indirim = fiyat1 - (fiyat1 * indirim1) / 100;
+    if (indirim < fiyat1) {
+        document.getElementById("cikti").innerText = "fiyat: " + indirim; // çıktı
 
-          if (indirim == indirim) {
+        if (indirim == indirim) {
             let kart = document.createElement("div");
             kart.id = "kart_divi";
             kart.className = "kart_class";
@@ -94,11 +94,13 @@
             paragraf.id = "soncikti";
             paragraf.style = "burlywood";
             document.getElementById("soncikti").innerHTML = "sonuc" + indirim;
-          }
-        } else {
-          alert("Eksik ya da yanlış tuşlama yaptınız.");
+            
         }
-      }
+    } else {
+        alert("Eksik ya da yanlış tuşlama yaptınız.");
+    }
+}
+
     </script>
   </body>
 </html>

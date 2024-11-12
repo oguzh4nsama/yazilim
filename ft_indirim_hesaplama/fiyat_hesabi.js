@@ -5,7 +5,7 @@ function hesapla() {
     if (indirim < fiyat1) {
         document.getElementById("cikti").innerText = "fiyat: " + indirim; // çıktı
 
-        if (indirim == indirim) {
+        if (indirim == indirim) { //2. durum için
             let kart = document.createElement("div");
             kart.id = "kart_divi";
             kart.className = "kart_class";
@@ -13,8 +13,8 @@ function hesapla() {
             kart.style.width = "100px";
             kart.style.height = "100px";
             kart.style.position = "absolute";
-            kart.style.left = "510px";
-            kart.style.top = "250px";
+            kart.style.left = "610px";
+            kart.style.top = "450px";
             kart.style.zIndex = "1";
             kart.style.margin = "1px";
             document.body.appendChild(kart);
