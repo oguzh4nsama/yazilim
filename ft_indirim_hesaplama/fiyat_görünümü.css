@@ -1,8 +1,8 @@
 .item3 {
-  background: linear-gradient(to right, brown, rgb(248, 0, 0), darkred);   
+  background: linear-gradient(to right, brown, rgb(248, 0, 0), darkred);
 }
 p {
-  color: rgb(153, 150, 145);
+  color: burlywood;
   font-size: large;
   position: relative;
 }
@@ -12,7 +12,6 @@ button {
   border-radius: 10px 3px 5px;
   font-size: medium;
   color: burlywood;
- 
 }
 button:hover {
   background: linear-gradient(to right, brown, rgb(255, 0, 0));
@@ -22,22 +21,31 @@ input {
   border-radius: 0px 0px 10px 10px;
   border: 2px solid gray;
 }
-.item1 { grid-area: header; }
-.item2 { grid-area: menu; }
-.item3 { grid-area: main; }
-.item4 { grid-area: right; }
-.item5 { grid-area: footer; }
+.item1 {
+  grid-area: header;
+}
+.item2 {
+  grid-area: menu;
+}
+.item3 {
+  grid-area: main;
+}
+.item4 {
+  grid-area: right;
+}
+.item5 {
+  grid-area: footer;
+}
 
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
-    'menu main main main main right'
-    'footer footer footer footer footer footer';
+    "header header header header header header"
+    "menu main main main main right"
+    "footer footer footer footer footer footer";
   gap: 10px;
-  background-color: #2196F3;
+  background-color: #2196f3;
   padding: 10px;
-    
 }
 
 .grid-container > div {
@@ -45,4 +53,13 @@ input {
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
+}
+
+.kart_class {
+  background-color: "black";
+  width: 100px;
+  height: 100px;
+  float: left;
+  z-index: 1;
+  margin: 1px;
 }

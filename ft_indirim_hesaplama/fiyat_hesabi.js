@@ -2,27 +2,15 @@ function hesapla() {
     let fiyat1 = Number(document.getElementById("fiyat").value);
     let indirim1 = Number(document.getElementById("indirim").value); // indirimi çekiyor
     let indirim = fiyat1 - (fiyat1 * indirim1) / 100; {
-        if (indirim == indirim) {
-            //2. durum için
+        if (indirim > indirim1) {
+            
             let kart = document.createElement("div");
             kart.id = "kart_divi";
             kart.className = "kart_class";
-            // FIX: kart_class için style css dosyasından düzenlenecek
-            //
-            kart.style.backgroundColor = "black";
-            kart.style.width = "100px";
-            kart.style.height = "100px";
-            kart.style.position = "absolute";
-            kart.style.left = "610px";
-            kart.style.top = "450px";
-            kart.style.zIndex = "1";
-            kart.style.margin = "1px";
+        
+        
             document.body.appendChild(kart);
-            let paragraf = document.createElement("p");
-            paragraf.style.zIndex = "2";
-            paragraf.id = "soncikti";
-            paragraf.style = "burlywood";
-            document.getElementById("soncikti").innerHTML = "sonuc" + indirim;
+            document.getElementById("cikti").innerHTML = "sonuc: " + indirim;
         }
         else {
             alert("Eksik ya da yanlış tuşlama yaptınız.");
