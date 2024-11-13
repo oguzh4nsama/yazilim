@@ -6,7 +6,13 @@ p {
   font-size: large;
   position: relative;
 }
+input {
+  border-radius: 10px 10px 10px 10px;
+  border: 3px a;
+  background: linear-gradient(to right, brown, rgb(255, 0, 0));
 
+  outline: 0; /* tıklandığındaki kenarları siliyor */
+}
 button {
   background-color: #7c0707;
   border-color: darkred;
@@ -17,14 +23,6 @@ button {
 button:hover {
   background: linear-gradient(to right, brown, rgb(255, 0, 0));
   color: rgb(172, 134, 84);
-}
-input {
-  border-radius: 10px 10px 10px 10px;
-  border: 3px a;
-  background: linear-gradient(to right, brown, rgb(255, 0, 0));
-
-    outline: 0;/* tıklandığındaki kenarları siliyor */
-
 }
 .item1 {
   grid-area: header;
@@ -54,12 +52,16 @@ input {
   padding: 10px;
 }
 
-.grid-container > .item1, .item2, .item3, .item4, .item5, .item6 {
+.grid-container > .item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6 {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding: 57px 100px;
   font-size: 30px;
-  
 }
 
 .kart_class {
@@ -69,7 +71,6 @@ input {
   float: left;
   z-index: 3;
   border: 5px solid burlywood;
-
 }
 .kartx {
   background-color: red;
@@ -78,7 +79,6 @@ input {
   float: left;
   z-index: 3;
   border: 5px solid white;
-
 }
 .kartz {
   background-color: red;
@@ -87,13 +87,12 @@ input {
   float: left;
   z-index: 3;
   border: 5px solid burlywood;
-
-}.karty {
+}
+.karty {
   background-color: red;
   width: 200px;
   height: 150px;
   float: left;
   z-index: 3;
   border: 5px solid rgb(0, 102, 255);
-
 }
