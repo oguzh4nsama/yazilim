@@ -10,7 +10,7 @@ input {
   border-radius: 10px 10px 10px 10px;
   border: 3px a;
   background: linear-gradient(to right, brown, rgb(255, 0, 0));
-
+  color: burlywood;
   outline: 0; /* tıklandığındaki kenarları siliyor */
 }
 button {
