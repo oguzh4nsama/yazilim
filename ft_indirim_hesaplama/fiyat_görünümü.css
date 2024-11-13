@@ -6,6 +6,7 @@ p {
   font-size: large;
   position: relative;
 }
+
 button {
   background-color: #7c0707;
   border-color: darkred;
@@ -18,8 +19,12 @@ button:hover {
   color: rgb(172, 134, 84);
 }
 input {
-  border-radius: 0px 0px 10px 10px;
-  border: 2px solid gray;
+  border-radius: 10px 10px 10px 10px;
+  border: 3px a;
+  background: linear-gradient(to right, brown, rgb(255, 0, 0));
+
+    outline: 0;/* tıklandığındaki kenarları siliyor */
+
 }
 .item1 {
   grid-area: header;
@@ -45,15 +50,16 @@ input {
     "menu main main main main right"
     "footer footer footer footer footer footer";
   gap: 10px;
-  background-color: #2196f3;
+  background: linear-gradient(to right, brown, rgb(255, 0, 0));
   padding: 10px;
 }
 
-.grid-container > div {
+.grid-container > .item1, .item2, .item3, .item4, .item5, .item6 {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding: 57px 100px;
   font-size: 30px;
+  
 }
 
 .kart_class {
