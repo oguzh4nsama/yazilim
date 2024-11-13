@@ -38,6 +38,7 @@ input {
 }
 
 .grid-container {
+  z-index: 0;
   display: grid;
   grid-template-areas:
     "header header header header header header"
@@ -56,10 +57,10 @@ input {
 }
 
 .kart_class {
-  background-color: "black";
+  background-color: rgb(253, 0, 0);
   width: 100px;
   height: 100px;
   float: left;
-  z-index: 1;
+  z-index: 3;
   margin: 1px;
 }
