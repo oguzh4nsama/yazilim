@@ -1,5 +1,5 @@
 .item3 {
-  background: linear-gradient(to right, brown, rgb(248, 0, 0), darkred);
+  background: linear-gradient(to right, rgb(248, 0, 0), rgb(0, 47, 202));
 }
 p {
   color: burlywood;
@@ -11,7 +11,7 @@ input {
   border: 3px a;
   background: linear-gradient(to right, brown, rgb(255, 0, 0));
   color: burlywood;
-  outline: 0; /* tıklandığındaki kenarları siliyor */
+  outline: 0; 
 }
 button {
   background-color: #7c0707;
@@ -47,20 +47,16 @@ button:hover {
   z-index: 0;
   display: grid;
   grid-template-areas:
-    "header header header header header header"
-    "menu main main main main right"
-    "footer footer footer footer footer footer";
+    "header header header header"
+    "menu main main right"
+    "footer footer footer footer";
   gap: 10px;
-  background: linear-gradient(to right, brown, rgb(255, 0, 0));
-  padding: 10px;
+  
+background: linear-gradient(to right,rgb(0, 47, 202) , rgb(255, 0, 0));
+padding: 10px;
 }
 
-.grid-container > .item1,
-.item2,
-.item3,
-.item4,
-.item5,
-.item6 {
+.grid-container > .item1,.item2,.item3,.item4,.item5,.item6 {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding: 57px 100px;
