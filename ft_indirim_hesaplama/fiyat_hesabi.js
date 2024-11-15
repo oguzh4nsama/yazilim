@@ -6,7 +6,6 @@ function hesapla() {
     {   
         if (indirimli_fiyat > ilk_indirim) { 
             document.getElementById("cikti").innerHTML = "Fiyat: " + indirimli_fiyat;
-            let bosluk = document.createElement("br");
             let kart = document.createElement("div");
 
             kart.id = "kart_divi";
@@ -16,31 +15,29 @@ function hesapla() {
                 let kart = document.createElement("div");
                 kart.id = "kart_divi";
                 kart.className = "kart_class"; 
-                let son_sonuc = document.createTextNode("Ve indirimli hali: " + indirimli_fiyat.toFixed(2)); 
+                let son_sonuc = document.createTextNode("Ve indirimli hali: " + indirimli_fiyat.toFixed(2)+ "\n"); 
                 kart.appendChild(son_sonuc);            
-                let indirim_hali = document.createTextNode("Yapılan indirim: " + ilk_indirim.toFixed(2)); 
-                kart.appendChild(indirim_hali);            
-                kart.appendChild(bosluk);  
-                let gelen_hali = document.createTextNode("İndirimsiz hali: " + gelen_fiyat.toFixed(2)); 
-                kart.appendChild(bosluk);  
+                let indirim_hali = document.createTextNode("Yapılan indirim: " + ilk_indirim.toFixed(2)+ "\n"); 
+                kart.appendChild(indirim_hali);     
+                let gelen_hali = document.createTextNode("İndirimsiz hali: " + gelen_fiyat.toFixed(2) + "\n"); 
                 kart.appendChild(gelen_hali);
-                kart.appendChild(bosluk);  
                 document.querySelector('.main').appendChild(kart);
             }
             
         }
 
         else if (indirimli_fiyat > 0) { 
-            document.getElementById("cikti").innerHTML = "Fiyat: " + indirimli_fiyat;
-
-            // Kart divi oluştur
-            let kart = document.createElement("div");
-            kart.id = "kart_divi";
-            kart.className = "kart_class";
-            let son_sonuc = document.createTextNode(indirimli_fiyat.toFixed(2)); 
-            kart.appendChild(son_sonuc);
-            // kart div'ini .main içerisine ekle
-            document.querySelector('.main').appendChild(kart); 
+            document.getElementById("cikti").innerHTML = "Fiyat: " + indirimli_fiyat;                     
+                let kart = document.createElement("div");
+                kart.id = "kart_divi";
+                kart.className = "kart_class"; 
+                let son_sonuc = document.createTextNode("Ve indirimli hali: " + indirimli_fiyat.toFixed(2)+ "\n"); 
+                kart.appendChild(son_sonuc);            
+                let indirim_hali = document.createTextNode("Yapılan indirim: " + ilk_indirim.toFixed(2)+ "\n"); 
+                kart.appendChild(indirim_hali);     
+                let gelen_hali = document.createTextNode("İndirimsiz hali: " + gelen_fiyat.toFixed(2) + "\n"); 
+                kart.appendChild(gelen_hali);
+                document.querySelector('.main').appendChild(kart);
         }
             
         else {  

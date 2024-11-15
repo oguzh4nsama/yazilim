@@ -88,8 +88,8 @@ button:hover {
 /* Kart */
 .kart_class {
   background-color: rgb(253, 0, 0);
-  width: 250px;
-  height: 200px;
+  width: 225px;
+  height: 150px;
   float: left;
   z-index: 3;
   border: 5px solid burlywood;
