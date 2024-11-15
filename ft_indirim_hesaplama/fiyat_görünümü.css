@@ -104,11 +104,8 @@ button:hover {
   padding: 15px;
   font-size: 15px;
 }
-
-
-
 /* Medya Sorguları - Mobil uyumluluk */
-@media (max-width: 768px) {
+@media (max-width: 10%) {
   .grid-container {
     grid-template-areas:
       "header header header"
