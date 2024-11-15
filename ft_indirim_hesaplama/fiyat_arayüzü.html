@@ -8,14 +8,9 @@
   </head>
   <body>
     <div class="grid-container">
-      <div class="item1"></div>
-      <!-- üst -->
-
-      <div class="item2"></div>
-      <!-- sol -->
-
-      <div class="item3">
-        <!-- ortası -->
+      <div class="header">Header</div>
+      <div class="menu">Menu</div>
+      <div class="main">
         <input
           type="number"
           id="fiyat"
@@ -23,15 +18,12 @@
         />
         <input type="number" id="indirim" placeholder="İndirim oranını girin" />
         <button onclick="hesapla()">Hesapla</button>
-        <p id="cikti">Fiyat:</p>
+        <div class="kutular">
+          <p id="cikti">Fiyat:</p>
+        </div>
       </div>
-      
-
-      <div class="item4"></div>
-      <!-- sağ -->
-
-      <div class="item5"></div>
-      <!-- alt -->
+      <div class="right">Right</div>
+      <div class="footer">Footer</div>
     </div>
 
     <script src="fiyat_hesabi.js"></script>

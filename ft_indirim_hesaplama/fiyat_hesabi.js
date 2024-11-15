@@ -3,40 +3,38 @@ function hesapla() {
     let indirim1 = Number(document.getElementById("indirim").value);
     let indirim = fiyat1 - (fiyat1 * indirim1) / 100;
 
-    // Geçerli girişleri kontrol et
-    if (isNaN(fiyat1) || isNaN(indirim1) || fiyat1 <= 0 || indirim1 < 0) {
-        alert("Lütfen geçerli bir fiyat ve indirim oranı girin.");
-        return;
-    }
+    {   
+        if (indirim > indirim1) {
+            document.getElementById("cikti").innerHTML = "Fiyat: " + indirim;
 
-    if (indirim > 0) {
-        // İndirimli fiyatı göster
-        document.getElementById("cikti").innerHTML = "Fiyat: " + indirim;
+            // Kart divi oluştur
+            let kart = document.createElement("div");
+            kart.id = "kart_divi";
+            kart.className = "kart_class";
 
-        // Kart elemanını oluştur ve .item3 alanına ekle
-        let kart = document.createElement("div");
-        kart.id = "kart_divi";
-        kart.className = "kart_class";
+            // İndirimli fiyatı 2 ondalıklı şekilde yazdır
+            let textNode = document.createTextNode(indirim.toFixed(2)); 
+            kart.appendChild(textNode);
 
-        // İndirim değerini text node olarak oluştur ve kart'a ekle
-        let textNode = document.createTextNode(indirim.toFixed(2)); // İndirimli fiyatı 2 ondalıklı şekilde göster
-        kart.appendChild(textNode);
+            // kart div'ini .main içerisine ekle
+            document.querySelector('.main').appendChild(kart);
+        }
 
-        // kart'ı .item3 içerisine ekle
-        document.querySelector('.item3').appendChild(kart);
-    } else if (indirim === 0) {
-        // İndirim 0 ise
-        document.getElementById("cikti").innerHTML = "Fiyat: 0";
+        else if (indirim    = indirim1) { // Eşitlik kontrolü düzeltildi
+            document.getElementById("cikti").innerHTML = "Fiyat: " + 0;
 
-        // Kart elemanını oluştur ve .item3 alanına ekle
-        let kart = document.createElement("div");
-        kart.id = "kart_divi";
-        kart.className = "kart_class";
-
-        // Kartı .item3 içerisine ekle
-        document.querySelector('.item3').appendChild(kart);
-    } else {
-        // Hatalı giriş yapıldığında kullanıcıyı uyar
-        alert("Eksik ya da yanlış bir değer girdiniz. Lütfen geçerli bir giriş yapın.");
-    }
+            // Kart divi oluştur
+            let kart = document.createElement("div");
+            kart.id = "kart_divi";
+            kart.className = "kart_class";
+            let textNode = document.createTextNode(indirim.toFixed(2)); 
+            kart.appendChild(textNode);
+            // kart div'ini .main içerisine ekle
+            document.querySelector('.main').appendChild(kart); 
+        }
+            
+        else {  
+            alert("Eksik ya da yanlış tuşlama yaptınız, lütfen geçerli tuşlama yapınız.");
+        }       
+    }       
 }

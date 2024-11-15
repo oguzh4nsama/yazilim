@@ -1,4 +1,61 @@
-.item3 {
+/* Genel Stil */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "menu main right"
+    "footer footer footer";
+  grid-template-columns: 1fr 3fr 1fr; /* 3 sütun düzeni */
+  grid-template-rows: auto 1fr auto; /* Üst, orta ve alt satırlar */
+  gap: 10px; /* Hücreler arasındaki boşluk */
+  padding: 20px;
+  background: linear-gradient(to right, rgb(0, 47, 202), rgb(255, 0, 0));
+  height: 100vh; /* Yüksekliği ekranın tamamı kadar yap */
+}
+
+.grid-container > .header,
+.grid-container > .menu,
+.grid-container > .main,
+.grid-container > .right,
+.grid-container > .footer {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px; /* Daha uygun padding */
+  font-size: 20px; /* Font boyutunu biraz küçültüyoruz */
+}
+
+/* Header */
+.header {
+  grid-area: header;
+}
+
+/* Menu */
+.menu {
+  grid-area: menu;
+}
+
+/* Main */
+.main {
+  grid-area: main;
+}
+
+/* Right */
+.right {
+  grid-area: right;
+}
+
+/* Footer */
+.footer {
+  grid-area: footer;
+}
+.main {
   background: linear-gradient(to right, rgb(248, 0, 0), rgb(0, 47, 202));
 }
 p {
@@ -27,42 +84,8 @@ button:hover {
 @keyframes  button{
   
 }
-.item1 {
-  grid-area: header;
-}
-.item2 {
-  grid-area: menu;
-}
-.item3 {
-  grid-area: main;
-}
-.item4 {
-  grid-area: right;
-}
-.item5 {
-  grid-area: footer;
-}
 
-.grid-container {
-  z-index: 0;
-  display: grid;
-  grid-template-areas:
-    "header header header header"
-    "menu main main right"
-    "footer footer footer footer";
-  gap: 10px;
-  
-background: linear-gradient(to right,rgb(0, 47, 202) , rgb(255, 0, 0));
-padding: 10px;
-}
-
-.grid-container > .item1,.item2,.item3,.item4,.item5,.item6 {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 57px 100px;
-  font-size: 30px;
-}
-
+/* Kart */
 .kart_class {
   background-color: rgb(253, 0, 0);
   width: 100px;
@@ -71,27 +94,37 @@ padding: 10px;
   z-index: 3;
   border: 5px solid burlywood;
 }
-.kartx {
-  background-color: red;
-  width: 33vh;
-  height: 150px;
-  float: left;
-  z-index: 3;
-  border: 5px solid white;
+.kutular{
+  grid-template-areas:
+  "kutular kutular kutular";
+  grid-template-columns: 1fr;
+
 }
-.kartz {
-  background-color: red;
-  width: 33vh;
-  height: 150px;
-  float: left;
-  z-index: 3;
-  border: 5px solid burlywood;
+.grid-container>.kutular{
+  padding: 15px;
+  font-size: 15px;
 }
-.karty {
-  background-color: red;
-  width: 32vh;
-  height: 150px;
-  float: left;
-  z-index: 3;
-  border: 5px solid rgb(0, 102, 255);
+
+
+
+/* Medya Sorguları - Mobil uyumluluk */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-areas:
+      "header header header"
+      "menu menu menu"  
+      "main main main"
+      "right right right"
+      "footer footer footer";
+    grid-template-columns: 1fr; /* Tek sütun düzeni */
+  }
+
+  .grid-container > .header,
+  .grid-container > .menu,
+  .grid-container > .main,
+  .grid-container > .right,
+  .grid-container > .footer {
+    padding: 15px;
+    font-size: 16px;
+  }
 }
