@@ -7,6 +7,24 @@ body {
 }
 
 .grid-container {
+  grid-template-areas:
+    "header header header"
+    "menu menu menu"
+    "main main main"
+    "right right right"
+    "footer footer footer";
+  grid-template-columns: 1fr; /* Tek sütun düzeni */
+}
+
+.grid-container > .header,
+.grid-container > .menu,
+.grid-container > .main,
+.grid-container > .right,
+.grid-container > .footer {
+  padding: 15px;
+  font-size: 16px;
+}
+.grid-container {
   display: grid;
   grid-template-areas:
     "header header header"
@@ -34,7 +52,6 @@ body {
 /* Header */
 .header {
   grid-area: header;
-
 }
 
 /* Menu */
@@ -102,24 +119,4 @@ button:hover {
 .grid-container > .kutular {
   padding: 15px;
   font-size: 15px;
-}
-/* Medya Sorguları - Mobil uyumluluk */
-
-.grid-container {
-  grid-template-areas:
-    "header header header"
-    "menu menu menu"
-    "main main main"
-    "right right right"
-    "footer footer footer";
-  grid-template-columns: 1fr; /* Tek sütun düzeni */
-}
-
-.grid-container > .header,
-.grid-container > .menu,
-.grid-container > .main,
-.grid-container > .right,
-.grid-container > .footer {
-  padding: 15px;
-  font-size: 16px;
 }
