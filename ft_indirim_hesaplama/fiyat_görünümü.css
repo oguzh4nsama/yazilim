@@ -15,11 +15,13 @@ body {
 }
 .grid-container {
   display: grid;
-  grid-template-areas:"header header header""menu main right""footer footer footer";
-  grid-template-columns: 1fr 3fr 1fr; /* 3 sütun düzeni */
+  grid-template-areas:
+  "header header header"
+  "menu main right"
+  "footer footer footer";
+  grid-template-columns: 1fr 2fr 1fr; /* 3 sütun düzeni */
   grid-template-rows: auto 1fr auto; /* Üst, orta ve alt satırlar */
   gap: 5px; /* Hücreler arasındaki boşluk */
-  padding: 0px;
   background: linear-gradient(to right, rgb(0, 47, 202), rgb(255, 0, 0));
   height: 100vh; /* Yüksekliği ekranın tamamı kadar yap */
 }
@@ -62,14 +64,12 @@ body {
 .main {
   background: linear-gradient(to right, rgb(248, 0, 0), rgb(0, 47, 202));
   overflow-y: auto; /* Yalnızca dikey kaydırma çubuğu göster */
-  height: 500px; /* Yüksekliği tam olarak ayarla */
 }
 
 /* Webkit kaydırma çubuğu özelleştirmeleri */
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1; 
