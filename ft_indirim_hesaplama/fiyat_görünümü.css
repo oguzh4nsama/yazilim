@@ -34,7 +34,7 @@ body {
 /* Header */
 .header {
   grid-area: header;
-  
+
 }
 
 /* Menu */
@@ -93,6 +93,7 @@ button:hover {
   float: left;
   z-index: 3;
   border: 5px solid burlywood;
+  display: flex;
 }
 .kutular {
   grid-template-areas: "kutular kutular kutular";
