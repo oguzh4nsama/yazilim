@@ -34,6 +34,7 @@ body {
 /* Header */
 .header {
   grid-area: header;
+  
 }
 
 /* Menu */
@@ -68,7 +69,7 @@ input {
   border: 3px a;
   background: linear-gradient(to right, brown, rgb(255, 0, 0));
   color: burlywood;
-  outline: 0; 
+  outline: 0;
 }
 button {
   background-color: #7c0707;
@@ -81,8 +82,7 @@ button:hover {
   background: linear-gradient(to right, brown, rgb(255, 0, 0));
   color: rgb(172, 134, 84);
 }
-@keyframes  button{
-  
+@keyframes button {
 }
 
 /* Kart */
@@ -94,34 +94,31 @@ button:hover {
   z-index: 3;
   border: 5px solid burlywood;
 }
-.kutular{
-  grid-template-areas:
-  "kutular kutular kutular";
+.kutular {
+  grid-template-areas: "kutular kutular kutular";
   grid-template-columns: 1fr;
-
 }
-.grid-container>.kutular{
+.grid-container > .kutular {
   padding: 15px;
   font-size: 15px;
 }
 /* Medya Sorguları - Mobil uyumluluk */
-@media (max-width: 10%) {
-  .grid-container {
-    grid-template-areas:
-      "header header header"
-      "menu menu menu"  
-      "main main main"
-      "right right right"
-      "footer footer footer";
-    grid-template-columns: 1fr; /* Tek sütun düzeni */
-  }
 
-  .grid-container > .header,
-  .grid-container > .menu,
-  .grid-container > .main,
-  .grid-container > .right,
-  .grid-container > .footer {
-    padding: 15px;
-    font-size: 16px;
-  }
+.grid-container {
+  grid-template-areas:
+    "header header header"
+    "menu menu menu"
+    "main main main"
+    "right right right"
+    "footer footer footer";
+  grid-template-columns: 1fr; /* Tek sütun düzeni */
+}
+
+.grid-container > .header,
+.grid-container > .menu,
+.grid-container > .main,
+.grid-container > .right,
+.grid-container > .footer {
+  padding: 15px;
+  font-size: 16px;
 }
