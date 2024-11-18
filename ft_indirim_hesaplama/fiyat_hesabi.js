@@ -89,7 +89,6 @@ function hesapla() {
     }
      else 
     {
-      
         document.getElementById("yanlis_cikti").innerHTML = "Eksik tuşlama yaptınız, lütfen geçerli işlem yapınız.";
         document.getElementById("yanlis_cikti").value = "";
     }
