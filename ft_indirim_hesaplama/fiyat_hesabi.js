@@ -3,7 +3,7 @@ function hesapla() {
     let indirim = Number(document.getElementById("indirimli_fiyat").value);
     let indirimli_fiyat = gelen_fiyat - (gelen_fiyat * indirim) / 100;
     if (gelen_fiyat == "" && indirim == "") {
-        alert("Lütfen ürün fiyatını ve indirimini doldurun.");
+        document.getElementById("yanlis_cikti").innerHTML = "Lütfen ürün fiyatını ve indirimini doldurun.";
 
         return;
     } else if (indirim > 100) {
@@ -17,7 +17,6 @@ function hesapla() {
         return;
     } else if (indirim == "") {
         document.getElementById("yanlis_cikti").innerHTML = "Ürün indirimini doldurunuz.";
-        
         return;
     }
 
@@ -69,8 +68,9 @@ function hesapla() {
         document.querySelector(".kutular").appendChild(kart);
         document.getElementById("yanlis_cikti").value = "";
     } else {
-        alert("Eksik ya da yanlış tuşlama yaptınız, lütfen geçerli işlem yapınız.");
-        document.getElementById("yanlis_cikti");
+      
+        document.getElementById("yanlis_cikti").innerHTML = "Eksik tuşlama yaptınız, lütfen geçerli işlem yapınız.";
+        document.getElementById("yanlis_cikti").value = "";
     }
 }
 
