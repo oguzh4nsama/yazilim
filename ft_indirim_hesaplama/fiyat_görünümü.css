@@ -110,16 +110,10 @@ button:hover {
   z-index: 3;
   border: 5px solid burlywood;
   display: flex;
-}
-.grid-container > .kutular {
-  padding: 15px;
-  font-size: 15px;
+  text-align: center;
 }
 
 .kutular {
-  grid-template-areas: "kutular kutular kutular";
-  grid-template-columns: 11fr;
-  margin:9px;
-  overflow-y: auto; 
-  height: 400px;   
+  display: flex;
+  flex-wrap:wrap;
 }
