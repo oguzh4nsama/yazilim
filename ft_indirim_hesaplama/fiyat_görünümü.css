@@ -102,18 +102,27 @@ button:hover {
 }
 
 /* Kart */
+.kutular {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Kutu aralarındaki boşluk */
+}
+
 .kart_class {
   background-color: rgb(253, 0, 0);
-  width: 198px;
+  width: 198px; /* Kutu genişliği */
   height: 150px;
-  float: left;
-  z-index: 3;
   border: 5px solid burlywood;
   display: flex;
+  flex-direction: column; /* İçeriklerin dikey sıraya göre hizalanmasını sağlar */
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.kutular {
-  display: flex;
-  flex-wrap:wrap;
+.kart_class p {
+  margin: 5px 0; /* Paragraflar arasındaki boşluk */
 }
+
+
+
