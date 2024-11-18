@@ -23,7 +23,9 @@ function hesapla() {
             kart.appendChild(indirim_hali);
             let gelen_hali = document.createTextNode("İndirimsiz hali: " + gelen_fiyat.toFixed(2) + "\n");
             kart.appendChild(gelen_hali);
-            document.querySelector('.main').appendChild(kart);
+            document.querySelector('.kutular').appendChild(kart);
+            document.getElementById("fiyat").value = "";
+            document.getElementById("indirimli_fiyat").value = "";
         }
 
     }

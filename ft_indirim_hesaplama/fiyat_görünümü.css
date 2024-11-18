@@ -5,6 +5,32 @@ body {
   padding: 0;
   background-color: #f4f4f4;
 }
+p {
+  color: burlywood;
+  font-size: large;
+  position: relative;
+}
+input {
+  border-radius: 10px 10px 10px 10px;
+  border: 3px a;
+  background: linear-gradient(to right, brown, rgb(255, 0, 0));
+  color: burlywood;
+  outline: 0;
+}
+button {
+  background-color: #7c0707;
+  border-color: darkred;
+  border-radius: 10px 3px 5px;
+  font-size: medium;
+  color: burlywood;
+}
+button:hover {
+  background: linear-gradient(to right, brown, rgb(255, 0, 0));
+  color: rgb(172, 134, 84);
+}
+@keyframes button {
+  /* doldurulcak */
+}
 .grid-container > .header,
 .grid-container > .menu,
 .grid-container > .main,
@@ -54,12 +80,11 @@ body {
 }
 .main {
   background: linear-gradient(to right, rgb(248, 0, 0), rgb(0, 47, 202));
-  overflow-y: auto; /* Yalnızca dikey kaydırma çubuğu göster */
 }
 
 /* Webkit kaydırma çubuğu özelleştirmeleri */
 .kutular::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 /* Track */
 .kutular::-webkit-scrollbar-track {
@@ -76,53 +101,25 @@ body {
   background: #555; 
 }
 
-
-p {
-  color: burlywood;
-  font-size: large;
-  position: relative;
-}
-input {
-  border-radius: 10px 10px 10px 10px;
-  border: 3px a;
-  background: linear-gradient(to right, brown, rgb(255, 0, 0));
-  color: burlywood;
-  outline: 0;
-}
-button {
-  background-color: #7c0707;
-  border-color: darkred;
-  border-radius: 10px 3px 5px;
-  font-size: medium;
-  color: burlywood;
-}
-button:hover {
-  background: linear-gradient(to right, brown, rgb(255, 0, 0));
-  color: rgb(172, 134, 84);
-}
-@keyframes button {
-}
-
 /* Kart */
 .kart_class {
   background-color: rgb(253, 0, 0);
-  width: 225px;
+  width: 198px;
   height: 150px;
   float: left;
   z-index: 3;
   border: 5px solid burlywood;
   display: flex;
 }
-.kutular {
-  grid-template-areas: "kutular kutular kutular";
-  grid-template-columns: 11fr;
-  margin: 5px;
-  height: 100vh;
-  width: 100%;
-  background-color: red;
-  
-}
 .grid-container > .kutular {
   padding: 15px;
   font-size: 15px;
+}
+
+.kutular {
+  grid-template-areas: "kutular kutular kutular";
+  grid-template-columns: 11fr;
+  margin:9px;
+  overflow-y: auto; 
+  height: 400px;   
 }
