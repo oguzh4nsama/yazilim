@@ -5,7 +5,6 @@ function hesapla() {
     if (gelen_fiyat == "" && indirim == "") 
     {
         document.getElementById("yanlis_cikti").innerHTML = "Lütfen ürün fiyatını ve indirimini doldurun.";
-
         return;
     } 
 
