@@ -6,30 +6,18 @@ body {
   background-color: #f4f4f4;
 }
 p {
-  color: burlywood;
   font-size: large;
   position: relative;
 }
 input {
   border-radius: 10px 10px 10px 10px;
   border: 3px a;
-  background: linear-gradient(to right, brown, rgb(255, 0, 0));
-  color: burlywood;
   outline: 0;
 }
 button {
-  background-color: #7c0707;
   border-color: darkred;
   border-radius: 10px 3px 5px;
   font-size: medium;
-  color: burlywood;
-}
-button:hover {
-  background: linear-gradient(to right, brown, rgb(255, 0, 0));
-  color: rgb(172, 134, 84);
-}
-@keyframes button {
-  /* doldurulcak */
 }
 .grid-container > .header,
 .grid-container > .menu,
@@ -50,7 +38,7 @@ button:hover {
   grid-template-columns: 1fr 2fr 1fr; /* 3 sütun düzeni */
   grid-template-rows: auto 1fr auto; /* Üst, orta ve alt satırlar */
   gap: 5px; /* Hücreler arasındaki boşluk */
-  background: linear-gradient(to right, rgb(0, 47, 202), rgb(255, 0, 0));
+  background: blue;
   height: 100vh; /* Yüksekliği ekranın tamamı kadar yap */
 }
 
@@ -79,7 +67,6 @@ button:hover {
   grid-area: footer;
 }
 
-
 /* Kart */
 .kutular {
   display: flex;
@@ -92,10 +79,10 @@ button:hover {
   box-sizing: border-box;
 }
 .kart_class {
-  background-color: rgb(253, 0, 0);
+  background-color: #f5fefd;
   width: 32%; /* 3 kutu için %32 genişlik */
   height: 120px;
-  border: 4px solid burlywood;
+  border: 4px solid blue;
   display: flex;
   flex-direction: column; /* İçeriklerin alt alta hizalanmasını sağlar */
   justify-content: center;
@@ -105,7 +92,7 @@ button:hover {
 }
 
 .main {
-  background: linear-gradient(to right, rgb(248, 0, 0), rgb(0, 47, 202));
+  background: #f5fefd;
 }
 
 .kutular::-webkit-scrollbar {
@@ -123,5 +110,3 @@ button:hover {
 .kutular::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
-
