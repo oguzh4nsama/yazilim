@@ -13,6 +13,8 @@ function hesapla() {
     }
     else if (gelen_fiyat == "" && indirim == "") {
         document.getElementById("yanlis_cikti").innerHTML = "Lütfen ürün fiyatını ve indirimini doldurun.";
+        document.getElementById("fiyat").value = "";
+        document.getElementById("indirimli_fiyat").value = "";   
         return;
     }
     else if (indirim > 100) {
