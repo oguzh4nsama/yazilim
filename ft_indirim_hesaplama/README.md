@@ -18,15 +18,6 @@
    Mobil Görünümü: Mobil cihazlarda her satırda tek bir ürün kartı gözükecek şekilde yapılandır.
 ----------------------------------------------------------------------------------------------------------------------------
 
-yapım sırası;
------------------------------------------------------------------------------------
-1- adım 1. ürün kartı;
-2- adım 2. grid ??
-4- adım 4. pc 3 tel 1 tek seferde görünücek şekilde ayarla
-3- adım 3. her kart ne indirimli_fiyatsiz üstü cili ekleme indirimli_fiyatli fiyatı normal göster.
------------------------------------------------------------------------------------
-
-
 yapılacak değişikler olursa:
 
 - NOTE: TODO FIX WARNING ile bildireceğim todo eklentisi yükleyin
