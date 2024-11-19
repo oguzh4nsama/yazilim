@@ -36,7 +36,7 @@ button:hover {
 button:active {
     border: 2px solid rgb(28, 207, 28); 
     background-color: rgb(70, 94, 34);
-    border-radius: 35px 2px 1px;
+    border-radius: 35% 2px 1px;
     font-size: medium;
     color: rgb(187, 108, 51);
 }
