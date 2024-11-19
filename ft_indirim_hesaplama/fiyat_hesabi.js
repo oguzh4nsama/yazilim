@@ -36,6 +36,8 @@ function hesapla() {
         let kart = document.createElement("div");
         kart.id = "kart_divi";
         kart.className = "kart_class";
+        document.getElementById("fiyat").value = "";
+        document.getElementById("indirimli_fiyat").value = "";
 
         if (indirimli_fiyat > indirim) {
             document.getElementById("cikti").innerHTML = "Fiyat: " + indirimli_fiyat;
