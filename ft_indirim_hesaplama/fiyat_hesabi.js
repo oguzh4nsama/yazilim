@@ -65,9 +65,11 @@ function hesapla() {
         kart.className = "kart_class";
         let cizgi = document.createElement("strike");
         cizgi.style.color = "red";
+        cizgi.style.display = "block"; // Burada cizgi etiketi block yapıldı
         let bosluk = document.createElement("br");
         document.getElementById("fiyat").value = "";
         document.getElementById("indirimli_fiyat").value = "";
+        kart.appendChild(bosluk);
         let son_sonuc = document.createTextNode(" Ve indirimli hali: " + indirimli_fiyat.toFixed(2) + " TL");
         kart.appendChild(son_sonuc);
         kart.appendChild(bosluk);
