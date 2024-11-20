@@ -94,8 +94,8 @@ button:active {
 /* Kart */
 .kutular {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap:wrap;
+  justify-content:center;
   max-height: calc(100vh - 200px);
   overflow-y: auto;
   overflow-x: hidden;
