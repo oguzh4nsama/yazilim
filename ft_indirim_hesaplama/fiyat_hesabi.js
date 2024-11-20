@@ -20,22 +20,22 @@ function hesapla() {
 
             hata.innerHTML = "Lütfen ürün fiyatını ve indirimini doldurun.";
             book = true;
-           
+
         }
         else if (gelen_fiyat <= 0) {
             hata.innerHTML = "Lütfen ürün fiyatını pozitif bir değer giriniz.";
             book = true;
-            
+
         }
         else if (indirim_orani <= 0) {
             hata.innerHTML = "Lütfen indirim oranını pozitif bir değer giriniz.";
             book = true;
-          
+
         }
         else if (indirim_orani > 100) {
             hata.innerHTML = "Girilen indirim oranı 100'den büyük olamaz.";
             book = true;
-            
+
         }
         if (book) {
             fiyat.style.border = "3px solid darkred";
@@ -51,7 +51,7 @@ function hesapla() {
     if (!kirmizi_yeşil()) {
         return; // Eğer hata varsa işlemi burada durdur
     }
-    
+
 
     fiyat.value = "";
     indirim.value = "";
