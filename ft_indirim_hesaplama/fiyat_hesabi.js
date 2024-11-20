@@ -4,33 +4,31 @@ function hesapla() {
     let gelen_fiyat = Number(fiyat.value);
     let indirim_orani = Number(indirim.value);
     let indirimli_fiyat = gelen_fiyat - (gelen_fiyat * indirim_orani) / 100;
-    let hataMesaji = document.getElementById("yanlis_cikti");
-    hataMesaji.innerHTML = "";
+    let benimhatamesajim = document.getElementById("yanlis_cikti");
+    benimhatamesajim.innerHTML = "";
+    if (indirim_hali) {
+        fiyat.style.border = "3px solid darkred"; //red fiyat
+        indirim.style.border = "3px solid darkred"; //red indirim
+        if (gelen_fiyat == "" && indirim_orani == "") {
 
-    if (gelen_fiyat == "" && indirim_orani == "") {
-        fiyat.style.border = "3px solid darkred";
-        indirim.style.border = "3px solid darkred";
-        hataMesaji.innerHTML = "Lütfen ürün fiyatını ve indirimini doldurun.";
-        return;
+            benimhatamesajim.innerHTML = "Lütfen ürün fiyatını ve indirimini doldurun.";
+            return;
+        }
+        if (gelen_fiyat <= 0) {
+            benimhatamesajim.innerHTML = "Lütfen ürün fiyatını pozitif bir değer giriniz.";
+            return;
+        }
+        if (indirim_orani <= 0) {
+            benimhatamesajim.innerHTML = "Lütfen indirim oranını pozitif bir değer giriniz.";
+            return;
+        }
+        if (indirim_orani > 100) {
+            benimhatamesajim.innerHTML = "Girilen indirim oranı 100'den büyük olamaz.";
+            return;
+        }
     }
-    if (gelen_fiyat <= 0) {
-        fiyat.style.border = "3px solid darkred";
-        hataMesaji.innerHTML = "Lütfen ürün fiyatını pozitif bir değer giriniz.";
-        return;
-    }
-    if (indirim_orani <= 0) {
-        indirim.style.border = "3px solid darkred";
-        hataMesaji.innerHTML = "Lütfen indirim oranını pozitif bir değer giriniz.";
-        return;
-    }
-    if (indirim_orani > 100) {
-        indirim.style.border = "3px solid darkred";
-        hataMesaji.innerHTML = "Girilen indirim oranı 100'den büyük olamaz.";
-        return;
-    }
-
-    fiyat.style.border = "3px solid green";
-    indirim.style.border = "3px solid green";
+    fiyat.style.border = "3px solid green"; //yes,fiyat
+    indirim.style.border = "3px solid green"; //yesiş indirim
     fiyat.value = "";
     indirim.value = "";
     document.getElementById("cikti").innerHTML = "Fiyat: " + indirimli_fiyat.toFixed(2) + " TL";
