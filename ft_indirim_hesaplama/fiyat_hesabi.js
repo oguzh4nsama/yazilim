@@ -12,43 +12,49 @@ function hesapla() {
     let hata = document.getElementById("yanlis_cikti");
     hata.innerHTML = "";
 
-    // Hata ve doğrulama renklerini kontrol eden fonksiyon
-    function kirmizi_yeşil() {
-        let hataVar = false; // Hata olup olmadığını tutar
+    //hata belirtisi
 
+    function kirmizi_yeşil() {
+        var book = false;
         if (gelen_fiyat == "" && indirim_orani == "") {
+
             hata.innerHTML = "Lütfen ürün fiyatını ve indirimini doldurun.";
-            hataVar = true;
-        } 
+            book = true;
+           
+        }
         else if (gelen_fiyat <= 0) {
             hata.innerHTML = "Lütfen ürün fiyatını pozitif bir değer giriniz.";
-            hataVar = true;
-        } 
+            book = true;
+            
+        }
         else if (indirim_orani <= 0) {
             hata.innerHTML = "Lütfen indirim oranını pozitif bir değer giriniz.";
-            hataVar = true;
-        } 
+            book = true;
+          
+        }
         else if (indirim_orani > 100) {
             hata.innerHTML = "Girilen indirim oranı 100'den büyük olamaz.";
-            hataVar = true;
+            book = true;
+            
         }
-
-        // Hata varsa kırmızı, yoksa yeşil yap
-        if (hataVar) {
+        if (book) {
             fiyat.style.border = "3px solid darkred";
             indirim.style.border = "3px solid darkred";
-            return false; // Hatalı durum
-        } else {
+            return false;
+        }
+        else {
             fiyat.style.border = "3px solid green";
             indirim.style.border = "3px solid green";
-            return true; // Doğru durum
+            return true;
         }
     }
-
-    // Kırmızı/yeşil kontrolünü çalıştır
     if (!kirmizi_yeşil()) {
         return; // Eğer hata varsa işlemi burada durdur
     }
+    
+
+    fiyat.value = "";
+    indirim.value = "";
 
     //indirimli halini düz gösterme
     document.getElementById("cikti").innerHTML = "Fiyat: " + indirimli_fiyat.toFixed(2) + " TL";
@@ -75,3 +81,5 @@ function hesapla() {
 
     document.querySelector(".kutular").appendChild(kart);
 }
+
+/* ez*/
