@@ -94,25 +94,25 @@ button:active {
 /* Kart */
 .kutular {
   display: flex;
-  flex-wrap: wrap; /* Kutuların sarmasını sağlıyoruz */
-  justify-content: space-left;
-  max-height: calc(100vh - 200px); /* Kapsayıcı yüksekliğini sınırlıyoruz */
-  overflow-y: auto; /* Dikey kaydırma çubuğunu etkinleştiriyoruz */
+  flex-wrap: wrap;
+  justify-content: center;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
   overflow-x: hidden;
   padding: 10px;
   box-sizing: border-box;
 }
 .kart_class {
   background-color: rgb(51, 44, 44);
-  width: 32%; /* 3 kutu için %32 genişlik */
-  height: 120px;
-  border: 5px solid white;
+  width: 31%;
+  height: 200px;
+  border: 3px solid white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  box-sizing: border-box; /* Kenarlık ve padding hesaplamalarını düzenler */
-  margin: 0px 0px 5px 5px;
+  box-sizing: border-box;
+  margin:  1%;
 }
 
 .main {

@@ -57,28 +57,25 @@ function hesapla() {
     
     if (indirimli_fiyat > 0) {
         document.getElementById("yanlis_cikti").innerHTML = "";
+        document.getElementById("fiyat").value = "";
+        document.getElementById("indirimli_fiyat").value = "";
         document.getElementById("cikti").innerHTML = "Fiyat: " + indirimli_fiyat;
         let kart = document.createElement("div");
         document.getElementById("fiyat").style.border = "3px solid green";
         document.getElementById("indirimli_fiyat").style.border = "3px solid green";
         kart.id = "kart_divi";
         kart.className = "kart_class";
+        let bosluk = document.createElement("br");
         let cizgi = document.createElement("strike");
         cizgi.style.color = "red";
-        cizgi.style.display = "block"; // Burada cizgi etiketi block yapıldı
-        let bosluk = document.createElement("br");
-        document.getElementById("fiyat").value = "";
-        document.getElementById("indirimli_fiyat").value = "";
-        kart.appendChild(bosluk);
-        let son_sonuc = document.createTextNode(" Ve indirimli hali: " + indirimli_fiyat.toFixed(2) + " TL");
-        kart.appendChild(son_sonuc);
-        kart.appendChild(bosluk);
-        let indirim_hali = document.createTextNode("Yapılan indirim: " + indirim.toFixed(2) + " TL");
-        kart.appendChild(indirim_hali);
-        kart.appendChild(bosluk);
         cizgi.textContent = "İndirimsiz hali: " + gelen_fiyat.toFixed(2) + " TL";
         kart.appendChild(cizgi);
-        kart.appendChild(bosluk);
+        let son_sonuc = document.createTextNode("Ve indirimli hali: " + indirimli_fiyat.toFixed(2) + " TL");
+        kart.appendChild(son_sonuc);
+        kart.appendChild(bosluk.cloneNode()); 
+        let indirim_hali = document.createTextNode("Yapılan indirim: " + indirim.toFixed(2) + " TL");
+        kart.appendChild(indirim_hali);
+        kart.appendChild(bosluk.cloneNode()); 
         document.querySelector(".kutular").appendChild(kart);
     }
-}    
+}
