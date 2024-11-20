@@ -4,27 +4,27 @@ function hesapla() {
     let gelen_fiyat = Number(fiyatInput.value);
     let indirim = Number(indirimInput.value);
     let indirimli_fiyat = gelen_fiyat - (gelen_fiyat * indirim) / 100;
-    let hataMesaji = document.getElementById("yanlis_cikti");
-    hataMesaji.innerHTML = "";
+    let uyari = document.getElementById("yanlis_cikti");
+    uyari.innerHTML = "";
     if (gelen_fiyat == "" && indirim == "") {
         fiyatInput.style.border = "3px solid darkred";
         indirimInput.style.border = "3px solid darkred";
-        hataMesaji.innerHTML = "Lütfen ürün fiyatını ve indirimini doldurun.";
+        uyari.innerHTML = "Lütfen ürün fiyatını ve indirimini doldurun.";
         return;
     }
     if (gelen_fiyat <= 0) {
         fiyatInput.style.border = "3px solid darkred";
-        hataMesaji.innerHTML = "Lütfen ürün fiyatını pozitif bir değer giriniz.";
+        uyari.innerHTML = "Lütfen ürün fiyatını pozitif bir değer giriniz.";
         return;
     }
     if (indirim <= 0) {
         indirimInput.style.border = "3px solid darkred";
-        hataMesaji.innerHTML = "Lütfen indirim oranını pozitif bir değer giriniz.";
+        uyari.innerHTML = "Lütfen indirim oranını pozitif bir değer giriniz.";
         return;
     }
     if (indirim > 100) {
         indirimInput.style.border = "3px solid darkred";
-        hataMesaji.innerHTML = "Girilen indirim oranı 100'den büyük olamaz.";
+        uyari.innerHTML = "Girilen indirim oranı 100'den büyük olamaz.";
         return;
     }
     fiyatInput.style.border = "3px solid green";
