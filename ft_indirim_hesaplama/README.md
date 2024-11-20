@@ -16,8 +16,11 @@
    Responsive Düzenleme:
    PC Görünümü: 3 sütunlu bir düzen oluştur, her satırda üç ürün kartı yer alsın.
    Mobil Görünümü: Mobil cihazlarda her satırda tek bir ürün kartı gözükecek şekilde yapılandır.
-----------------------------------------------------------------------------------------------------------------------------
+
+---
 
 yapılacak değişikler olursa:
 
 - NOTE: TODO FIX WARNING ile bildireceğim todo eklentisi yükleyin
+  NOTE: js dosyası JAVASCRIPT içindir css için değil
+  FIX: js dosyasındaki style özellikleri css kısmından gelecek
