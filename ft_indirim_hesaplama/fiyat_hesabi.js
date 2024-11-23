@@ -1,85 +1,70 @@
 function hesapla() {
-    //fiyat ve indirimi çekme 
     let fiyat = document.getElementById("fiyat");
     let indirim = document.getElementById("indirimli_fiyat");
-    let gelen_fiyat = Number(fiyat.value);
-    let indirim_orani = Number(indirim.value);
-
-    //işlem
+    let gelen_fiyat = fiyat.value.trim(); // Girişten gelen değeri temizle
+    let indirim_orani = indirim.value.trim(); // Girişten gelen değeri temizle
+    if (!sart_sorgulama(gelen_fiyat, indirim_orani)) {
+        return; // Hatalı giriş varsa işlem durdurulur
+    }
+    gelen_fiyat = Number(gelen_fiyat);
+    indirim_orani = Number(indirim_orani);
     let indirimli_fiyat = gelen_fiyat - (gelen_fiyat * indirim_orani) / 100;
-
-    //temizleme
-    let hata = document.getElementById("yanlis_cikti");
-    hata.innerHTML = "";
-
-    //hata belirtisi
-
-    function kirmizi_yeşil() {
-        var book = false;
-        if (gelen_fiyat == "" && indirim_orani == "") {
-
-            hata.innerHTML = "Lütfen ürün fiyatını ve indirimini doldurun.";
-            book = true;
-
-        }
-        else if (gelen_fiyat <= 0) {
-            hata.innerHTML = "Lütfen ürün fiyatını pozitif bir değer giriniz.";
-            book = true;
-
-        }
-        else if (indirim_orani <= 0) {
-            hata.innerHTML = "Lütfen indirim oranını pozitif bir değer giriniz.";
-            book = true;
-
-        }
-        else if (indirim_orani > 100) {
-            hata.innerHTML = "Girilen indirim oranı 100'den büyük olamaz.";
-            book = true;
-
-        }
-        if (book) {
-            fiyat.style.border = "3px solid darkred";
-            indirim.style.border = "3px solid darkred";
-            return false;
-        }
-        else {
-            fiyat.style.border = "3px solid green";
-            indirim.style.border = "3px solid green";
-            return true;
-        }
-    }
-    if (!kirmizi_yeşil()) {
-        return; // Eğer hata varsa işlemi burada durdur
-    }
-
-
-    fiyat.value = "";
-    indirim.value = "";
-
-    //indirimli halini düz gösterme
     document.getElementById("cikti").innerHTML = "Fiyat: " + indirimli_fiyat.toFixed(2) + " TL";
-
-    //div br strike yaratma
     let kart = document.createElement("div");
     kart.id = "kart_divi";
     kart.className = "kart_class";
-    let bosluk = document.createElement("br");
     let cizgi = document.createElement("strike");
-
-    //indirimsiz hali gelen_Fiyat-fiyat
     cizgi.textContent = "İndirimsiz hali: " + gelen_fiyat.toFixed(2) + " TL";
     kart.appendChild(cizgi);
-
-    //indirimli hali indirim-indirimli_orani
+    let bosluk = document.createElement("br");
     let son_sonuc = document.createTextNode("Ve indirimli hali: " + indirimli_fiyat.toFixed(2) + " TL");
     kart.appendChild(son_sonuc);
-    kart.appendChild(bosluk.cloneNode());
-
-    // yapılan indirim indirim_orani-indirim
-    let indirim_hali = document.createTextNode("Yapılan indirim: " + indirim_orani.toFixed(2) + " TL");
+    kart.appendChild(bosluk);
+    let indirim_hali = document.createTextNode("Yapılan indirim: " + indirim_orani.toFixed(2) + "%");
     kart.appendChild(indirim_hali);
-
     document.querySelector(".kutular").appendChild(kart);
+    fiyat.value = "";
+    indirim.value = "";
 }
 
-/* ez*/
+function sart_sorgulama(gelen_fiyat, indirim_orani) {
+    let hata = document.getElementById("yanlis_cikti");
+    hata.innerHTML = ""; // Hata mesajını sıfırla
+    if (gelen_fiyat === "" || indirim_orani === "") {
+        hata.innerHTML = "Lütfen tüm alanları doldurun.";
+        setHataStili();
+        return false;
+    }
+    if (!/^\d+(\.\d+)?$/.test(gelen_fiyat) || !/^\d+(\.\d+)?$/.test(indirim_orani)) {
+        hata.innerHTML = "Lütfen geçerli sayısal değerler girin.";
+        setHataStili();
+        return false;
+    }
+    if (Number(gelen_fiyat) <= 0) {
+        hata.innerHTML = "Lütfen ürün fiyatını pozitif bir değer giriniz.";
+        setHataStili();
+        return false;
+    }
+    if (Number(indirim_orani) <= 0) {
+        hata.innerHTML = "Lütfen indirim oranını pozitif bir değer giriniz.";
+        setHataStili();
+        return false;
+    }
+    if (Number(indirim_orani) > 100) {
+        hata.innerHTML = "İndirim oranı 100'den büyük olamaz.";
+        setHataStili();
+        return false;
+    }
+    setDogruStili();
+    return true;
+
+    function setHataStili() {
+        document.getElementById("fiyat").style.border = "3px solid darkred";
+        document.getElementById("indirimli_fiyat").style.border = "3px solid darkred";
+    }
+
+    function setDogruStili() {
+        document.getElementById("fiyat").style.border = "3px solid green";
+        document.getElementById("indirimli_fiyat").style.border = "3px solid green";
+    }
+}
