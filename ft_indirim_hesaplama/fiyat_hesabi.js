@@ -30,9 +30,8 @@ function hesapla() {
     indirim.value = "";
   } else {
     //hatalı versiyon
-    document.getElementById("fiyat").style.border = "3px solid darkred";
-    document.getElementById("indirimli_fiyat").style.border =
-      "3px solid darkred";
+    document.getElementById("fiyat").style.border = "solid darkred";
+    document.getElementById("indirimli_fiyat").style.border ="solid darkred";
   }
 }
 
@@ -62,11 +61,7 @@ function sart_dogru(gelen_fiyat, indirim_orani) {
     hata.innerHTML = "İndirim oranı 100'den büyük olamaz.";
     return false;
   }
-  setDogruStili();
+  document.getElementById("fiyat").style.border = " solid green";
+  document.getElementById("indirimli_fiyat").style.border = "solid green";
   return true;
-
-  function setDogruStili() {
-    document.getElementById("fiyat").style.border = "3px solid green";
-    document.getElementById("indirimli_fiyat").style.border = "3px solid green";
-  }
 }
