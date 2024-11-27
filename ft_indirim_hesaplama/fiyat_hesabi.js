@@ -1,16 +1,6 @@
-function mobilbutooonnnn() {
-  let hamburger_kod = document.createElement("button");
-  hamburger_kod.id = "hamburger";
-  hamburger_kod.className = "hamburger_classı";
-  hamburger_kod.style.background = "blue";
-  hamburger_kod.style.color = "white";
-  hamburger_kod.style.height = "50px";
-  hamburger_kod.style.width = "50px";
-  hamburger_kod.textContent = "☰"; // Hamburger simgesi
-  document.querySelector(".main").appendChild(hamburger_kod);
+function buyukbar() {
+  alert("Buton çalıştı!");
 }
-mobilbutooonnnn(); // Fonksiyonu çağır
-
 function hesapla() {
   let fiyat = document.getElementById("fiyat");
   let indirim = document.getElementById("indirimli_fiyat");
