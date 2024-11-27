@@ -9,11 +9,6 @@ p {
   font-size: large;
   position: relative;
 }
-.goruntu{
-  background-color: red;
-  width: 200px;
-  height: 100px;
-}
 input {
   color: black;
   border-radius: 10px;
