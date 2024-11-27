@@ -38,8 +38,6 @@ button:active {
   font-size: medium;
   color: rgb(187, 108, 51);
 }
-
-
 .grid-container > .header,
 .grid-container > .menu,
 .grid-container > .main,
@@ -55,7 +53,7 @@ button:active {
   display: grid;
   grid-template-areas:
     "header header header"
-    "menu main right"
+    "menu main main"
     "footer footer footer";
   grid-template-columns: 0.75fr 3.5fr 0.75fr; /* 3 sütun düzeni */
   grid-template-rows: auto 1fr auto; /* Üst, orta ve alt satırlar */
@@ -77,18 +75,6 @@ button:active {
 }
 .footer {
   grid-area: footer;
-}
-.grid-container::content {
-  display: grid;
-  grid-template-areas:
-    "header header header"
-    "menu main right"
-    "footer footer footer";
-  grid-template-columns: 0.75fr 3.5fr 0.75fr; /* 3 sütun düzeni */
-  grid-template-rows: auto 1fr auto; /* Üst, orta ve alt satırlar */
-  gap: 5px; /* Hücreler arasındaki boşluk */
-  background: wheat;
-  height: 100vh; /* Yüksekliği ekranın tamamı kadar yap */
 }
 .kutular {
   display: flex;
@@ -115,6 +101,7 @@ button:active {
 .kart_class strike {
   color: red;
 }
+
 .main {
   background: #f5fefd;
 }

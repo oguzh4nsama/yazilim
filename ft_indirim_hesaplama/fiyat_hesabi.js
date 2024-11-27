@@ -1,8 +1,21 @@
+function mobilbutooonnnn() {
+  let hamburger_kod = document.createElement("button");
+  hamburger_kod.id = "hamburger";
+  hamburger_kod.className = "hamburger_classı";
+  hamburger_kod.style.background = "blue";
+  hamburger_kod.style.color = "white";
+  hamburger_kod.style.height = "50px";
+  hamburger_kod.style.width = "50px";
+  hamburger_kod.textContent = "☰"; // Hamburger simgesi
+  document.querySelector(".main").appendChild(hamburger_kod);
+}
+mobilbutooonnnn(); // Fonksiyonu çağır
+
 function hesapla() {
   let fiyat = document.getElementById("fiyat");
   let indirim = document.getElementById("indirimli_fiyat");
-  let gelen_fiyat = fiyat.value.trim(); 
-  let indirim_orani = indirim.value.trim(); 
+  let gelen_fiyat = fiyat.value.trim();
+  let indirim_orani = indirim.value.trim();
   if (sart_dogru(gelen_fiyat, indirim_orani)) {
     gelen_fiyat = Number(gelen_fiyat);
     indirim_orani = Number(indirim_orani);
@@ -25,7 +38,7 @@ function hesapla() {
     indirim.value = "";
   } else {
     document.getElementById("fiyat").style.border = "solid darkred";
-    document.getElementById("indirimli_fiyat").style.border ="solid darkred";
+    document.getElementById("indirimli_fiyat").style.border = "solid darkred";
   }
 }
 function sart_dogru(gelen_fiyat, indirim_orani) {
