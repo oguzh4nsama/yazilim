@@ -38,12 +38,6 @@ button:active {
   font-size: medium;
   color: rgb(187, 108, 51);
 }
-.menuuuuu ol, 
-.menuuuuu ul {
-  margin: 0;
-  padding: 0;
-}
-
 .grid-container > .header,
 .grid-container > .menu,
 .grid-container > .main,
