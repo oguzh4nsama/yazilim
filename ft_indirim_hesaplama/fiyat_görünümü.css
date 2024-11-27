@@ -1,4 +1,3 @@
-/* Genel Stil */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -18,28 +17,32 @@ input {
 }
 button {
   border-color: darkred;
+  background-color: wheat;
   width: 80px;
   height: 40px;
-  border-radius: 55% 3px 5px ;
+  border-radius: 55% 3px 5px;
   font-size: medium;
-  background-color: black;
   color: saddlebrown;
 }
 button:hover {
   border-color: darkgoldenrod;
   background-color: rgb(44, 39, 39);
-  border-radius: 42% 3px 5px;
+  border-radius: 55% 3px 55px;
   font-size: medium;
   color: rgb(187, 108, 51);
 }
 button:active {
-    border: 2px solid rgb(28, 207, 28); 
-    background-color: rgb(70, 94, 34);
-    border-radius: 35% 2px 1px;
-    font-size: medium;
-    color: rgb(187, 108, 51);
+  border: 2px solid rgb(28, 207, 28);
+  background-color: rgb(70, 94, 34);
+  border-radius: 55% 3px 5px;
+  font-size: medium;
+  color: rgb(187, 108, 51);
 }
-
+.menuuuuu ol, 
+.menuuuuu ul {
+  margin: 0;
+  padding: 0;
+}
 
 .grid-container > .header,
 .grid-container > .menu,
@@ -58,43 +61,43 @@ button:active {
     "header header header"
     "menu main right"
     "footer footer footer";
-  grid-template-columns: 0.75fr 3.50fr 0.75fr; /* 3 sütun düzeni */
+  grid-template-columns: 0.75fr 3.5fr 0.75fr; /* 3 sütun düzeni */
   grid-template-rows: auto 1fr auto; /* Üst, orta ve alt satırlar */
   gap: 5px; /* Hücreler arasındaki boşluk */
   background: wheat;
   height: 100vh; /* Yüksekliği ekranın tamamı kadar yap */
 }
-
-/* Header */
 .header {
   grid-area: header;
 }
-
-/* Menu */
 .menu {
   grid-area: menu;
 }
-
-/* Main */
 .main {
   grid-area: main;
 }
-
-/* Right */
 .right {
   grid-area: right;
 }
-
-/* Footer */
 .footer {
   grid-area: footer;
 }
-
-/* Kart */
+.grid-container::content {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "menu main right"
+    "footer footer footer";
+  grid-template-columns: 0.75fr 3.5fr 0.75fr; /* 3 sütun düzeni */
+  grid-template-rows: auto 1fr auto; /* Üst, orta ve alt satırlar */
+  gap: 5px; /* Hücreler arasındaki boşluk */
+  background: wheat;
+  height: 100vh; /* Yüksekliği ekranın tamamı kadar yap */
+}
 .kutular {
   display: flex;
-  flex-wrap:wrap;
-  justify-content:center;
+  flex-wrap: wrap;
+  justify-content: center;
   max-height: calc(100vh - 200px);
   overflow-y: auto;
   overflow-x: hidden;
@@ -111,9 +114,9 @@ button:active {
   justify-content: center;
   text-align: center;
   box-sizing: border-box;
-  margin:  1%;
+  margin: 1%;
 }
-.kart_class strike{
+.kart_class strike {
   color: red;
 }
 .main {
