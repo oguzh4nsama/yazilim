@@ -1,5 +1,7 @@
 function buyukbar() {
-  alert("Buton çalıştı!");
+  let buyuk_div=document.createElement("div");
+  buyuk_div.className = "acilir_Bar";
+  document.querySelector("main").appendChild(buyuk_div)
 }
 function hesapla() {
   let fiyat = document.getElementById("fiyat");
