@@ -93,19 +93,16 @@ button:active {
 @media only screen and (max-width: 600px) {
   .grid-container {
     grid-template-areas:
-      "header header header"
-      "menu menu menu"
-      "main main main"
-      "right right right"
-      "footer footer footer";
+      "header header"
+      "menu menu"
+      "main main"
+      "footer footer";
     grid-template-columns: 1fr; /* Tek sütun */
-    grid-template-rows: auto auto auto auto auto; /* Her alan için bir satır */
+    gap: 1px; /* Hücreler arasındaki boşluk */
+    grid-template-rows: 50px 50px auto 50px; /* Her alan için bir satır */
     background: pink; /* Mobilde farklı arka plan */
   }
 }
-
-
-
 .kutular {
   display: flex;
   flex-wrap: wrap;
@@ -152,16 +149,13 @@ button:active {
   background: #555;
 }
 
-.container {
-  max-width: 1050px;
-  width: 90%;
-  margin: auto;
-}
+
 
 .navbar {
   width: 100%;
   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
 }
+
 
 .nav-container {
   display: flex;
