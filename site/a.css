@@ -1,0 +1,137 @@
+.kutu {
+  overflow: auto;
+}
+
+.top1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  float: left;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.top1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mid1 .row .col-6 img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.yazilar {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  text-align: center;
+}
+
+.mid1 {
+  float: left;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #eaeaea;
+  text-align: center;
+  border: 1px solid #000000;
+}
+.col-6 .item .title{
+    border-radius: 30px 30px 0 0;
+    border: 2px solid black;
+}
+
+.item {
+  position: relative;
+}
+
+.title {
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  opacity: 0; /* Görünmez yapar */
+  z-index: 2; /* Başlığın üzerine yerleştirir */
+}
+
+.content {
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 3px 3px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+input:checked + .title + .content {
+  max-height: 200px; /* İçeriğin görünür olacağı yükseklik */
+  overflow: auto; /* Taşma olursa kaydırma çubuğu */
+}
+.bot {
+  background-color: #ddd;
+  width: 100%;
+  height: 500px;
+  float: left;
+}
+.utu {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+  height: 300px;
+  width: 250px;
+  background-color: #000000;
+  border-radius: 35% 0 35% 0;
+  float: left;
+  margin: 90px 90px 90px 90px;
+  text-align: center;
+}
+p a {
+  text-decoration: none;
+  color: red;
+}
+a:hover {
+  color: darkred;
+}
+body {
+  background-image: url(deniz.png);
+}
+label1 {
+    margin-left: 630px;
+}
+label1 a{
+    text-decoration: none;
+    color: #b30000;
+}
+label1 a:hover{
+    color: rgb(255, 174, 0);
+}
