@@ -1,0 +1,93 @@
+/* Genel Stil */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+h1 {
+    color: #e74c3c;
+    font-size: 3em;
+}
+
+button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+#game-screen, #inventory-screen {
+    display: none;
+}
+
+#game-canvas {
+    border: 2px solid #333;
+    background-color: #2c3e50;
+}
+
+.inventory-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.player-inventory {
+    width: 40%;
+    background-color: #34495e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.character-slot {
+    background-color: #7f8c8d;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.character-image {
+    width: 60px;
+    height: 80px;
+    background-color: #ecf0f1;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.slots {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.slot {
+    width: 50px;
+    height: 50px;
+    background-color: #95a5a6;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#exit-game-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#back-btn {
+    background-color: #e74c3c;
+    margin-top: 20px;
+}
+
+#back-btn:hover {
+    background-color: #c0392b;
+}

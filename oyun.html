@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orta Çağ Dövüş Oyunu</title>
+    <link rel="stylesheet" href="oyun.css">
+</head>
+<body>
+    <!-- Başlangıç Menüsü -->
+    <div id="main-menu">
+        <h1>⚔️ Orta Çağ Dövüş Oyunu ⚔️</h1>
+        <p>2 oyuncu ile savaşın, düşmanları yenin ve galip gelin!</p>
+        <button id="play-btn">Oyna</button>
+        <button id="inventory-btn">Envanter</button>
+    </div>
+
+    <!-- Oyun Ekranı -->
+    <div id="game-screen" style="display: none;">
+        <canvas id="game-canvas" width="1080" height="1024"></canvas>
+        <button id="exit-game-btn">Çıkış</button> <!-- Çıkış butonu -->
+    </div>
+
+    <!-- Envanter Ekranı -->
+    <div id="inventory-screen" style="display: none;">
+        <h2>⚔️ Envanter Yönetimi ⚔️</h2>
+        <div class="inventory-container">
+            <!-- Oyuncu 1 Envanteri -->
+            <div class="player-inventory" id="player1-inventory">
+                <h3>Oyuncu 1</h3>
+                <div class="character-slot">
+                    <div class="character-image" id="character1"></div>
+                    <p>Altın: <span id="gold1">30</span></p>
+                </div>
+                <div class="slots">
+                    <!-- 12 Envanter Slotu -->
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                </div>
+            </div>
+
+            <!-- Oyuncu 2 Envanteri -->
+            <div class="player-inventory" id="player2-inventory">
+                <h3>Oyuncu 2</h3>
+                <div class="character-slot">
+                    <div class="character-image" id="character2"></div>
+                    <p>Altın: <span id="gold2">30</span></p>
+                </div>
+                <div class="slots">
+                    <!-- 12 Envanter Slotu -->
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                </div>
+            </div>
+        </div>
+        <button id="back-btn">Geri Dön</button>
+    </div>
+
+    <script src="oyun.js"></script>
+</body>
+</html>

@@ -66,11 +66,11 @@ button:active {
   display: grid;
   grid-template-areas:
     "header header header"
-    "menu main right"
+    "menu main main"
     "footer footer footer";
   grid-template-columns: 0.75fr 3.5fr 0.75fr; /* 3 sütun düzeni */
   grid-template-rows: auto 1fr auto; /* Üst, orta ve alt satırlar */
-  gap: 5px; /* Hücreler arasındaki boşluk */
+  gap: 1px; /* Hücreler arasındaki boşluk */
   background: wheat;
   height: 100vh; /* Yüksekliği ekranın tamamı kadar yap */
 }
@@ -89,6 +89,23 @@ button:active {
 .footer {
   grid-area: footer;
 }
+
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-areas:
+      "header header header"
+      "menu menu menu"
+      "main main main"
+      "right right right"
+      "footer footer footer";
+    grid-template-columns: 1fr; /* Tek sütun */
+    grid-template-rows: auto auto auto auto auto; /* Her alan için bir satır */
+    background: pink; /* Mobilde farklı arka plan */
+  }
+}
+
+
+
 .kutular {
   display: flex;
   flex-wrap: wrap;
@@ -154,19 +171,19 @@ button:active {
 }
 
 .menu-items {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      height: 72.79%;
-      width: 150px;
-      background-color: wheat;
-      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-      position: fixed;
-      top: 31.3px;
-      right: -250px;
-      transition: transform 0.5s ease-in-out;
-      padding-top: 80px;
-      z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 72.79%;
+    width: 150px;
+    background-color: wheat;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 31.3px;
+    right: -250px;
+    transition: transform 0.5s ease-in-out;
+    padding-top: 80px;
+    z-index: 3;
 }
 
 .menu-items li {
@@ -198,7 +215,7 @@ button:active {
   height: 26px;
   width: 32px;
   position: absolute;
-  top: 60px;
+  top: 10px;
   right: 20px;
   z-index: 5;
   cursor: pointer; /* Tıklanabilir hale getirildi */
@@ -210,8 +227,7 @@ button:active {
   border-radius: 10px;
   background-color: #00a2ff;
   transition: transform 0.4s ease-in-out;
-}
-
+} 
 .line1 {
   transform-origin: 0% 0%;
 }
@@ -224,6 +240,7 @@ button:active {
   transform-origin: 0% 100%;
 }
 
+/* görünümünü ayarlar */
 .checkbox:checked ~ .menu-items {
   transform: translateX(-250px);
 }
