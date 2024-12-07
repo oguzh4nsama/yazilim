@@ -114,6 +114,9 @@ button:active {
   padding: 10px;
   box-sizing: border-box;
 }
+.hamburgermenu{
+  display: none;
+}
 .kart_class {
   background-color: rgb(51, 44, 44);
   width: 31%;
@@ -148,4 +151,37 @@ button:active {
 
 .kutular::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+@media only screen and (max-width: 600px){
+  .hamburgermenu{
+    background-color: rgb(255, 0, 0);
+    width: 50px;
+    border: 1px solid #555 ;
+    border-radius: 10px;
+    border-color: #f5fefd;
+    height: 35px;
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    float: right;
+  }
+  .hamburgermenu {
+    cursor: pointer; /* İmleç, buton gibi görünür */
+  }
+  .hamburgermenu:hover{
+    background-color: darkred;
+  }
+  .hamburgermenu:active{
+    background-color: rgb(207, 135, 135);
+  }
+}
+.uzuncubuk{
+  display: none;
+  background-color: #888;
+  color: wheat;
+  width: 400px;
+  height: 350px;
+  z-index: 3;
 }
