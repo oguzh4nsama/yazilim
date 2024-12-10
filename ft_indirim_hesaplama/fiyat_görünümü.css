@@ -15,6 +15,24 @@ input {
   outline: 0;
   background-color: wheat;
 }
+li{
+  color: white;
+  
+}
+ul {
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+}
+li {  
+  margin: 25px 10px 15px 10px;
+  font-size: 16px;
+  color: white;
+}
+li a {
+  color: white; 
+  text-decoration: none;
+}
 #goruntu {
   color: red;
   background-color: black;
@@ -23,7 +41,7 @@ input {
   border-radius: 10px;
   float: right;
 }
-.acilir_Bar{
+.acilir_Bar {
   background-color: red;
   width: 800px;
   height: 300px;
@@ -37,6 +55,7 @@ button {
   font-size: medium;
   color: saddlebrown;
 }
+
 button:hover {
   border-color: darkgoldenrod;
   background-color: rgb(44, 39, 39);
@@ -50,6 +69,16 @@ button:active {
   border-radius: 55% 3px 5px;
   font-size: medium;
   color: rgb(187, 108, 51);
+}
+.heeee {
+  background-color: red;
+  width: 360px;
+  height: 388px;
+  z-index: 4;
+  position: absolute;
+  right: 0;
+  top: 155px;
+  visibility: hidden; /* Varsayılan olarak gizli */
 }
 .grid-container > .header,
 .grid-container > .menu,
@@ -70,9 +99,10 @@ button:active {
     "footer footer footer";
   grid-template-columns: 0.75fr 3.5fr 0.75fr; /* 3 sütun düzeni */
   grid-template-rows: auto 1fr auto; /* Üst, orta ve alt satırlar */
-  gap: 1px; /* Hücreler arasındaki boşluk */
+  gap: 5px; /* Hücreler arasındaki boşluk */
   background: wheat;
   height: 100vh; /* Yüksekliği ekranın tamamı kadar yap */
+ 
 }
 .header {
   grid-area: header;
@@ -89,18 +119,69 @@ button:active {
 .footer {
   grid-area: footer;
 }
-
+.uzuncubuk {
+  display: none;
+}
 @media only screen and (max-width: 600px) {
+  .heeee {
+    visibility: visible; /* Mobilde görünür yap */
+  }
   .grid-container {
     grid-template-areas:
-      "header header"
       "menu menu"
+      "header header"
       "main main"
       "footer footer";
     grid-template-columns: 1fr; /* Tek sütun */
     gap: 1px; /* Hücreler arasındaki boşluk */
     grid-template-rows: 50px 50px auto 50px; /* Her alan için bir satır */
-    background: pink; /* Mobilde farklı arka plan */
+    background: pink; 
+    .hamburgermenu {
+      background-color: rgb(255, 0, 0);
+      width: 50px;
+      border-radius: 10px;
+      border-color: #f5fefd;
+      height: 35px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      float: right;
+    }
+    .hamburgermenu {
+      cursor: pointer; /* İmleç, buton gibi görünür */
+    }
+    .hamburgermenu:hover {
+      background-color: darkred;
+      border: 3px;
+      border-color: rgb(238, 238, 238);
+    }
+    .hamburgermenu:active {
+      background-color: rgb(107, 9, 9);
+      border: 3px;
+      border-color: rgb(238, 238, 238);
+    }
+    .heeee{
+      background-color: red;
+      width: 300px;
+      height: 100px;
+      z-index: 4;
+      visibility: visible; /* Mobilde görünür yap */
+    }
+    li{
+      float: left; 
+      margin: 5px 0 10px 13%;
+    }
+    .heeee{
+      background-color: red;
+      width: 360px;
+      height: 388px;
+      z-index: 4;
+      position: absolute;
+      
+      visibility:visible;
+    }
   }
 }
 .kutular {
@@ -114,7 +195,7 @@ button:active {
   padding: 10px;
   box-sizing: border-box;
 }
-.hamburgermenu{
+.hamburgermenu {
   display: none;
 }
 .kart_class {
@@ -132,56 +213,23 @@ button:active {
 .kart_class strike {
   color: red;
 }
-
 .main {
   background: #f5fefd;
 }
-
 .kutular::-webkit-scrollbar {
   width: 10px;
 }
-
 .kutular::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
-
 .kutular::-webkit-scrollbar-thumb {
   background: #888;
 }
-
 .kutular::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-@media only screen and (max-width: 600px){
-  .hamburgermenu{
-    background-color: rgb(255, 0, 0);
-    width: 50px;
-    border: 1px solid #555 ;
-    border-radius: 10px;
-    border-color: #f5fefd;
-    height: 35px;
-    color: white;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    float: right;
-  }
-  .hamburgermenu {
-    cursor: pointer; /* İmleç, buton gibi görünür */
-  }
-  .hamburgermenu:hover{
-    background-color: darkred;
-  }
-  .hamburgermenu:active{
-    background-color: rgb(207, 135, 135);
-  }
-}
-.uzuncubuk{
-  display: none;
-  background-color: #888;
-  color: wheat;
+.menuu{
+  background-color: #555;
   width: 400px;
-  height: 350px;
-  z-index: 3;
+  height: 300px; 
 }

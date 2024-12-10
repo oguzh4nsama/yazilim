@@ -63,3 +63,12 @@ function sart_dogru(gelen_fiyat, indirim_orani) {
   document.getElementById("indirimli_fiyat").style.border = "solid green";
   return true;
 }
+const menuButton = document.getElementById("menuButton");
+menuButton.addEventListener("click", hamburgermenu);
+
+function hamburgermenu() {
+  let acilirmenu = document.createElement("div");
+  acilirmenu.id = "menu_id";
+  acilirmenu.className = "menuu";
+  
+}
