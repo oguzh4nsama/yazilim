@@ -28,7 +28,7 @@ body {
   .mid {
     grid-area: mid;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 sütun oluşturur */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 15px; /* Kartlar arasındaki boşluk */
     justify-items: center; /* Kartları yatayda ortalar */
   }
@@ -78,7 +78,6 @@ body {
     background-color: #fff;
     width: 300px;
     color: red;
-
     height: 100px;
     text-decoration: none; /* Alt çizgiyi kaldırır */
     display: block; /* Tüm <li> elemanını kapsaması için blok seviye yapar */
@@ -100,20 +99,44 @@ body {
       "mid mid"
       "bot bot";
     grid-template-rows: 1.5fr 3fr 1fr; /* Üst, orta ve alt satırlar */
-    gap: 15px; /* Hücreler arasındaki boşluk */
-    height: 95vh; /* Yüksekliği ekranın tamamı kadar yap */
-    background: red;
+    gap: 10px; /* Hücreler arasındaki boşluk */
+    height: 100vh; /* Yüksekliği ekranın tamamı kadar yap */
+    background: black;
     .top {
       ul {
         margin-top: 10px;
         margin-left: 50px;
       }
     }
+    img{
+      width: 140px;
+      height: 68px;
+    }
+    .menuu {
+      width: 140px;
+      height: 165px;
+      border-radius: 32%;
+      border: 3px solid gray;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+    }
+  .beyaz {
+    background-color: #fff;
+    width: 140px;
+    color: black;
+    height: 70px;
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    display: block; /* Tüm <li> elemanını kapsaması için blok seviye yapar */
+  }
   }
   .menuu {
-    background-color: red;
-    width: 20px;
-    height: 20px;
+    background-color:black;
+    width: 10px;
+    height: 10px;
     position: fixed;
     top: 50%;
   }
