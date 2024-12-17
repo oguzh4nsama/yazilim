@@ -64,11 +64,7 @@ function sart_dogru(gelen_fiyat, indirim_orani) {
   return true;
 }
 const menuButton = document.getElementById("menuButton");
-menuButton.addEventListener("click", hamburgermenu);
-
-function hamburgermenu() {
-  let acilirmenu = document.createElement("div");
-  acilirmenu.id = "menu_id";
-  acilirmenu.className = "menuu";
-  
-}
+const div = document.querySelector(".hamburgermenu");
+button.addEventListener("click", () => {
+  div.classList.toggle("active"); // active class'ını ekler/kaldırır
+}); 

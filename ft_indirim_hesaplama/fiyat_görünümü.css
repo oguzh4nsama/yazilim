@@ -17,7 +17,6 @@ input {
 }
 li{
   color: white;
-  
 }
 ul {
   list-style-type: none; 
@@ -128,8 +127,8 @@ button:active {
   }
   .grid-container {
     grid-template-areas:
+      "header header"  
       "menu menu"
-      "header header"
       "main main"
       "footer footer";
     grid-template-columns: 1fr; /* Tek sütun */
@@ -162,25 +161,27 @@ button:active {
       border: 3px;
       border-color: rgb(238, 238, 238);
     }
-    .heeee{
-      background-color: red;
-      width: 300px;
-      height: 100px;
-      z-index: 4;
-      visibility: visible; /* Mobilde görünür yap */
-    }
+    
     li{
       float: left; 
       margin: 5px 0 10px 13%;
     }
     .heeee{
-      background-color: red;
-      width: 360px;
-      height: 388px;
-      z-index: 4;
-      position: absolute;
       
-      visibility:visible;
+      background-color: red;
+      width: 300px;
+      height: 300px;
+      position: fixed;
+      top: 50%;
+      right: -310px; /* Başlangıçta dışarıda */
+      transform: translateY(-50%);
+      transition: right 0.5s ease, box-shadow 0.5s ease; /* box-shadow için geçiş ekledik */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Gölgelendirme ekledik */
+    }
+    
+    .heeee.active {
+      right: 100px; /* Ekranda görünür */
+      box-shadow: 0 0 25px rgba(179, 255, 0, 0.7); /* Gölgeyi daha belirgin yapalım */
     }
   }
 }
